@@ -1,18 +1,114 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body{
+    background-color: #232323;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
 }
+
+p{
+    font-family: 'Inter', sans-serif;
+}
+
+/************* CATEGORIES *****************/ 
+.card{
+    width: 300px;
+    height: 300px;
+    border: none;
+    margin-bottom: 10px; /* Réduit l'espace vertical entre les cartes */
+    margin-left: 4rem;
+}
+
+.col{
+    padding-top: 60px;
+}
+
+.card-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Pour placer l'icône au-dessus de l'image */
+    width: 50px; /* Ajustez la largeur selon vos besoins */
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+.custom-image {
+    width: 300px; /* Largeur souhaitée */
+    height: 300px; /* Hauteur souhaitée */
+    object-fit: cover; /* Redimensionnement de l'image tout en maintenant son rapport d'aspect */
+  }
+
+  .btn-custom {
+    margin-top: 15px;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .btn-custom:hover {
+    background-color: #A479FF; 
+    color: #232323;
+  }
+
+  .btn-custom-2 {
+    margin-top: 15px;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .btn-custom-2:hover {
+    background-color: #FF95BB; 
+    color: #232323;
+  }
+
+  .btn-custom-3 {
+    margin-top: 15px;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .btn-custom-3:hover {
+    background-color: #EA4231; 
+    color: #232323;
+  }
+
+.btn-custom-4 {
+    margin-top: 15px;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .btn-custom-4:hover {
+    background-color: #EFCE6E; 
+    color: #232323;
+  }
+  
+  .btn-custom-5 {
+    margin-top: 15px;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .btn-custom-5:hover {
+    background-color: #14FF8E; 
+    color: #232323;
+  }
+
 
 a {
   font-weight: 500;
@@ -55,15 +151,4 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
