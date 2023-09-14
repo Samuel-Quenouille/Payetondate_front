@@ -7,6 +7,14 @@ body{
     font-family: 'Abril Fatface', cursive;
 }
 
+ul{
+  color: white
+}
+
+.form_signin, .form_signup, .create_place{
+  color: white;
+}
+
 p{
     font-family: 'Inter', sans-serif;
 }
