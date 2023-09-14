@@ -1,6 +1,7 @@
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import { Link } from 'react-router-dom';
+import Logout from "../components/Logout";
 
 
 export default function Navbar() {
