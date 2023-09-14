@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import React, { useEffect } from 'react';
+import { useAtom } from 'jotai';
+import { userAtom } from './atom';
+import Cookies from 'js-cookie';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -9,6 +12,21 @@ import Register from './pages/register';
 import Login from './pages/login';
 
 export default function App() {
+  const [user] = useAtom(userAtom);
+  const [, setUser] = useAtom(userAtom);
+
+  useEffect(() => {
+    const token = Cookies.get('token');
+    const id = Cookies.get('id');
+
+    if (token) {
+      setUser({
+        id: id,
+        isLoggedIn: true,
+        token: token,
+      });
+    }
+  }, []);
 
   return (
     <>
