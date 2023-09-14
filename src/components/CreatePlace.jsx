@@ -127,11 +127,17 @@ export default function CreatePlace() {
         <div>
           <label htmlFor="category">Catégorie :</label>
           <br></br>
-          <input
+          <select
             id="category"
             value={category}
             onChange={handleCategoryChange}
-          />
+          >
+            <option value="Histoire de">Histoire de</option>
+    		    <option value="Spot à bisou(s)">Spot à bisou(s)</option>
+    		    <option value="On sort le grand jeu">On sort le grand jeu</option>
+    		    <option value="Insolite">Insolite</option>
+            <option value="Gratuit">Gratuit</option>
+          </select>
         </div>
         <div>
           <label htmlFor="address">Adresse :</label>
