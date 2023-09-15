@@ -1,4 +1,5 @@
 import Categories from "../components/Categories"
+import Letterlove from "../components/Letterlove"
 
 export default function Home() {
 
@@ -6,6 +7,10 @@ export default function Home() {
         <header>
             <div className="container">
             <Categories/>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Letterlove/>
 
             </div>
         </header>
