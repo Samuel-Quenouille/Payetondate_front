@@ -96,11 +96,11 @@ export default function Register() {
           className="custom-input"
         />
       </div>
-      <div className="button-register">
+      <div className="button-register d-flex justify-content-center">
       <button type="submit">S'inscrire</button>
       </div>
     </form>
-    <Link className="nav-link" to="/">Retour</Link>
+    <Link className="return d-flex justify-content-end" to="/">Retour</Link>
     </div>
   );
 }
