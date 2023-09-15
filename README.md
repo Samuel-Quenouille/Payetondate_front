@@ -21,7 +21,7 @@ Inscription et authentification des utilisateurs
 Consultation des lieux
 Création des lieux pour les utilisateurs
 
-#### 🎳 La version que l’on présentera aux jurys 
+#### 👨🏻‍🏫 La version que l’on présentera aux jurys 
 Session utilisateur/ admin
 Validation des évènements par un admin
 
@@ -34,7 +34,7 @@ Validation des évènements par un admin
 <img width="724" alt="Capture d’écran 2023-09-15 à 20 06 05" src="https://github.com/Samuel-Quenouille/Payetondate_front/assets/129835381/e4f50b86-dc63-4f64-9047-eac076964ba8">
 <img width="607" alt="Capture d’écran 2023-09-15 à 20 04 07" src="https://github.com/Samuel-Quenouille/Payetondate_front/assets/129835381/aa23461b-6b01-48f2-9262-2111725ccf12">
 
-### Contribution
+### 👩🏻‍🎨👩🏽‍🌾🧑🏼‍🚀 Contribution
 [@Samuel](https://github.com/Samuel-Quenouille)
 
 [@Chloé](https://github.com/ChloeLevieil)
