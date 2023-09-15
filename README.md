@@ -29,9 +29,10 @@ Validation des évènements par un admin
 [Notre trello](https://trello.com/b/lbGzwhg0/paye-ton-date)
 
 ### Maquettes figma :
+<img width="724" alt="Capture d’écran 2023-09-15 à 20 06 05" src="https://github.com/Samuel-Quenouille/Payetondate_front/assets/129835381/e4f50b86-dc63-4f64-9047-eac076964ba8">
 <img width="607" alt="Capture d’écran 2023-09-15 à 20 04 07" src="https://github.com/Samuel-Quenouille/Payetondate_front/assets/129835381/aa23461b-6b01-48f2-9262-2111725ccf12">
 
-[Notre maquettes](https://www.figma.com/file/inzlKya4vYR4I5OOV8P6NU/payetondate?type=design&node-id=1-154&mode=design&t=Cym3QQEK2jE1fT0T-0)
+[Notre maquette](https://www.figma.com/file/inzlKya4vYR4I5OOV8P6NU/payetondate?type=design&node-id=1-154&mode=design&t=Cym3QQEK2jE1fT0T-0)
 
 ### Contribution
 [@Samuel](https://github.com/Samuel-Quenouille)
