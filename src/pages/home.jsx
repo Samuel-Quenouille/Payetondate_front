@@ -1,4 +1,5 @@
 import Categories from "../components/Categories"
+import TopFive from "../components/TopFive"
 import Letterlove from "../components/Letterlove"
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         <header>
             <div className="container">
             <Categories/>
+            <TopFive/>
             <br></br>
             <br></br>
             <br></br>

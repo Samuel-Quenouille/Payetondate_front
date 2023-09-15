@@ -118,6 +118,51 @@ p{
   }
 
 
+/************* TOP 5 *****************/ 
+.top-title, h3{
+  color: white !important;
+  font-family: 'Abril Fatface', cursive !important;
+  margin-top: 80px;
+}
+
+.card-top{
+  margin-top: 200px;
+  border-radius: 8px;
+}
+
+.card-title{
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.card-text{
+  text-align: justify;
+  padding-top: 1rem;
+  font-size: 0.8em;
+  font-weight: light;
+}
+
+.custom-body-1{
+  background-color: #A479FF;
+}
+
+.custom-body-2{
+  background-color: #EFCE6E;
+}
+
+.custom-body-3{
+  background-color: #FF95BB;
+}
+
+.custom-body-4{
+  background-color: #EA4231;
+}
+
+.custom-body-5{
+  background-color: #14FF8E;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
