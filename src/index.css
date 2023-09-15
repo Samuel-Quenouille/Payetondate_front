@@ -271,6 +271,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/************* Your love's letter *****************/ 
+
 .top-title, h3{
   color: white !important;
   font-family: 'Abril Fatface', cursive !important;
@@ -287,5 +289,55 @@ button:focus-visible {
   text-align: justify;
   padding: 15px;
 }
+
+/************* Tell us *****************/
+
+.text-tellus {
+  color: white !important;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+.small-interline {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.circle-btn {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none; /* Supprime la bordure de mise au point par défaut */
+  text-align: center;
+  text-decoration: none;
+}
+
+.circle-btn:hover {
+  background-color: #EA4231;
+  color: #232323;
+  text-decoration: none;
+  transition: background-color 0.3s ease !important;
+}
+
+.text-circle-btn {
+  color: white;
+  font-family: inherit;
+}
+
+.input-tellus {
+  width: 600px !important; 
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
 
 
