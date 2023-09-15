@@ -151,4 +151,21 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.top-title, h3{
+  color: white !important;
+  font-family: 'Abril Fatface', cursive !important;
+  margin-top: 80px;
+}
+
+.card-firstname {
+  font-size: 0.8em;
+  font-weight:bold;
+  text-align: right;
+}
+
+.card-loveletter {
+  text-align: justify;
+  padding: 15px;
+}
+
 
