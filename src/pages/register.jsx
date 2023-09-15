@@ -55,44 +55,52 @@ export default function Register() {
   return (
     <div className="form_signup container">
     <form onSubmit={handleSubmit}>
-      <h2>S'inscrire</h2>
+    <h1 className="top-title-login">S'inscrire</h1>
       {error && <p>{error}</p>}
-      <div>
-        <label htmlFor="email">Ton email :</label>
+      <div className="label-input-container">
+        <label htmlFor="email" className="custom-label">Ton email :</label>
         <br></br>
         <input
           type="email"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder="email"
           required
+          className="custom-input"
         />
       </div>
-      <div>
-        <label htmlFor="password">Créé ton mot de passe :</label>
+      <div className="label-input-container">
+        <label htmlFor="password" className="custom-label">Créé ton mot de passe :</label>
         <br></br>
         <input
           type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="mot de passe"
           required
+          className="custom-input"
         />
       </div>
-      <div>
-        <label htmlFor="password">Confirme ton mot de passe :</label>
+      <div className="label-input-container">
+        <label htmlFor="password" className="custom-label">Confirme ton mot de passe :</label>
         <br></br>
         <input
           type="password"
           id="password"
           value={password_confirmation}
           onChange={(e) => setPassword_Confirmation(e.target.value)}
+          placeholder="mot de passe"
           required
+          className="custom-input"
         />
       </div>
+      <div className="button-register d-flex justify-content-center">
       <button type="submit">S'inscrire</button>
+      </div>
     </form>
-    <Link className="nav-link" to="/">Retour</Link>
+    <Link className="return d-flex justify-content-end" to="/">Retour</Link>
     </div>
   );
 }

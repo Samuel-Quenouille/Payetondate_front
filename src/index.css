@@ -89,10 +89,32 @@ p a.nav-link:hover {
 }
 
 .link-register p {
-  margin-top: 10px;
+    margin-top: 10px;
     font-size: 0.8em;
 }
 
+/************* REGISTER *****************/ 
+.button-register button {
+  color: white;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Centre le texte horizontalement */
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: column; /* Pour centrer le texte verticalement */
+  justify-content: center; 
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.button-register button:hover{
+  background-color: #EFCE6E;
+  color: #232323;
+  border: none;
+}
 
 /************* CATEGORIES *****************/ 
 .card{
@@ -192,6 +214,11 @@ p a.nav-link:hover {
     color: #232323 !important;
   }
 
+  .return{
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+  }
 
 /************* TOP 5 *****************/ 
 .top-title, h3{
