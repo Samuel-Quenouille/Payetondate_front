@@ -290,9 +290,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -361,6 +359,19 @@ button:focus-visible {
 
 .input-tellus {
   width: 600px !important; 
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.input-tellus-first_name {
+  width: 383px !important; 
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.input-tellus-age {
   background-color: transparent !important;
   border: 1px solid white !important;
   color: white !important;

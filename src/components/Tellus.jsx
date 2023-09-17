@@ -1,12 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useAtom } from 'jotai';
+import { userAtom } from '../atom';
 import '../index.css';
-import { Link } from 'react-router-dom';
 
 export default function Tellus() {
+  const [first_name, setFirstName] = useState('');
+  const [age, setAge] = useState('');
+  const [description, setDescription] = useState('');
+  const [user] = useAtom(userAtom);
+
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  }
+
+  const handleFirstNameChange = (event) => {
+    setFirstName(event.target.value);
+  }
+
+  const handleAgeChange = (event) => {
+    setAge(event.target.value);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+  const newTestimony = {
+    testimony: {
+      first_name: first_name,
+      age: age,
+      description: description
+    }
+  }
+
+  try {
+    const response = await fetch('http://localhost:3000/testimonies', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${user.token}`,
+      },
+      body: JSON.stringify(newTestimony),
+    });
+
+    if (response.ok) {
+      console.log('Votre témoignage a été créé avec succès');
+    } else {
+      console.error("Erreur lors de la création du témoignage");
+    }
+  } catch (error) {
+    console.error("Erreur lors de la création du témoignage : ", error);
+  }
+};
 
   return (
     <>
-      <h3 classNameName='top-title'>Racontez-nous</h3>
+      <h3 className='top-title'>Racontez-nous</h3>
       <br></br>
       <p className="text-tellus small-interline">Ici, partagez nous votre témoignage.</p> 
       <p className="text-tellus small-interline">Dites-nous où était votre date et comment ça s’est passé.</p>
@@ -15,22 +63,25 @@ export default function Tellus() {
       <br></br>
       <br></br>
 
-      <form className="d-flex flex-column align-items-center">
-        <div className="mb-3 text-tellus">
-          <label htmlFor="exampleInputEmail1" className="form-label">Votre email</label>
-          <input type="email" className="form-control input-tellus" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email"/>
+      <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
+        <div className="row g-3 text-tellus">
+          <div className="col">
+            <label htmlFor="first_name" className="form-label">Ton prénom</label>
+            <input value={first_name} onChange={handleFirstNameChange} type="text" className="form-control input-tellus-first_name" id="first_name" placeholder="First_name"/>
+          </div>
+          <div className="col">
+            <label htmlFor="age" className="form-label">Ton âge</label>
+            <input value={age} onChange={handleAgeChange} type="integer" className="form-control input-tellus-age" id="age" placeholder="Age"/>
+          </div>
         </div>
-
-        <div className="mb-3 text-tellus">
-          <label htmlFor="exampleInputPassword1" className="form-label">Votre message</label>
-          <textarea type="message" className="form-control input-tellus" id="exampleInputMessage" rows="6" placeholder="dites-nous tout ici !"/>
-        </div>
-
         <br></br>
 
-        <Link to="/" className="circle-btn text-circle-btn">
-          Envoyer
-        </Link>
+        <div className="mb-3 text-tellus">
+          <label htmlFor="description" className="form-label">Ton message</label>
+          <textarea value={description} onChange={handleDescriptionChange} type="message" className="form-control input-tellus" id="description" rows="6" placeholder="dites-nous tout ici !"/>
+        </div>
+        <br></br>
+        <button type="submit" className="circle-btn text-circle-btn">Envoyer</button>
       </form>
 
       <br></br>
