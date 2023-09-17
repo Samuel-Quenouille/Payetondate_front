@@ -20,6 +20,9 @@ export default function Navbar() {
                     <Link className="nav-link" to="/createplace">
                         Créer un lieu
                     </Link>
+                    <Link className="nav-link" to="/admin">
+                        Tableau de bord
+                    </Link>
                     <Logout />
                     </>
                 ) : (
