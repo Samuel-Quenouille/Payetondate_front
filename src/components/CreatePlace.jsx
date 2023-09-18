@@ -23,10 +23,7 @@ export default function CreatePlace() {
   };
 
   const handlePriceChange = (event) => {
-    const inputValue = event.target.value;
-    const numericValue = inputValue.replace(/\D/g, ''); // Supprime tous les caractères non numériques
-
-  setPrice(numericValue);
+    setPrice(event.target.value);
   };
 
   const handleCategoryChange = (event) => {
@@ -117,11 +114,16 @@ export default function CreatePlace() {
         <div>
           <label htmlFor="price">Prix :</label>
           <br></br>
-          <input
+          <select
             id="price"
             value={price}
             onChange={handlePriceChange}
-          />
+          >
+            <option value="Gratuit">Gratuit</option>
+    		    <option value="0-15">0 - 15 €</option>
+            <option value="15-30">15 - 30 €</option>
+            <option value="30 et +">A partir de 30 €</option>
+          </select>
         </div>
         <div>
           <label htmlFor="category">Catégorie :</label>
@@ -168,11 +170,32 @@ export default function CreatePlace() {
         <div>
           <label htmlFor="borough">Arrondissement :</label>
           <br></br>
-          <input
+          <select
             id="borough"
             value={borough}
             onChange={handleBoroughChange}
-          />
+          >
+            <option value="1er">1er</option>
+    		    <option value="2e">2e</option>
+            <option value="3e">3e</option>
+            <option value="4e">4e</option>
+            <option value="5e">5e</option>
+            <option value="6e">6e</option>
+            <option value="7e">7e</option>
+            <option value="8e">8e</option>
+            <option value="9e">9e</option>
+            <option value="10e">10e</option>
+            <option value="11e">11e</option>
+            <option value="12e">12e</option>
+            <option value="13e">13e</option>
+            <option value="14e">14e</option>
+            <option value="15e">15e</option>
+            <option value="16e">16e</option>
+            <option value="17e">17e</option>
+            <option value="18e">18e</option>
+            <option value="19e">19e</option>
+            <option value="20e">20e</option>
+          </select>
         </div>
         <div>
           <label htmlFor="url">URL :</label>
