@@ -11,7 +11,11 @@ export default function Home() {
             <div className="container">
             <Welcome/>
             <br></br>
+            <br></br>
+            <br></br>
             <Categories/>
+            <br></br>
+            <br></br>
             <br></br>
             <TopFive/>
             <br></br>
