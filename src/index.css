@@ -74,7 +74,7 @@ p{
 }
 
 .button-login button:hover{
-  background-color: #14FF8E;
+  background-color: white;
   color: #232323;
   border: none;
 }
@@ -111,7 +111,7 @@ p a.nav-link:hover {
 }
 
 .button-register button:hover{
-  background-color: #EFCE6E;
+  background-color: white;
   color: #232323;
   border: none;
 }
@@ -347,7 +347,7 @@ button:focus-visible {
 }
 
 .circle-btn:hover {
-  background-color: #EA4231;
+  background-color: white;
   color: #232323;
   text-decoration: none;
   transition: background-color 0.3s ease !important;
