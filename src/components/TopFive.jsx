@@ -7,7 +7,6 @@ export default function TopFive () {
     return (
         <div className='container card-top'>
             <h3 className="top-title">Notre top 5 de la semaine</h3>
-           
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     <div className="col">
                         <div className="card h-100">
