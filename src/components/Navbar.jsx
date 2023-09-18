@@ -8,13 +8,17 @@ export default function Navbar() {
     const [user] = useAtom(userAtom);
 
     return (
-        <nav>
-            <ul className="navbar-nav me-auto">
-                <li className="nav-item">
+        <nav className="navbar navbar-expand p-2">
+            <ul className="navbar-nav d-flex align-items-center justify-content-between w-100">
+                <li className="nav-item d-flex">
                     <Link className="nav-link" to="/">
                         Accueil
                     </Link>
+                    <Link className="nav-link" to="#">
+                        Articles
+                    </Link>
                 </li>
+                <li className='flex-1'>
                 {user.isLoggedIn ? (
                     <>
                     <Link className="nav-link" to="/createplace">
@@ -26,15 +30,18 @@ export default function Navbar() {
                     <Logout />
                     </>
                 ) : (
-                    <>
-                    <Link className="nav-link" to="/register">
+                    <> 
+                    {/* <Link className="nav-link" to="/register">
                         Inscription
-                    </Link>
-                    <Link className="nav-link" to="/login">
+                    </Link> */}
+                    <div className=''>
+                    <Link className="whitebtn" to="/login">
                         Connexion
                     </Link>
+                    </div>
                     </>
                 )}
+              </li>
             </ul>
         </nav>
     )
