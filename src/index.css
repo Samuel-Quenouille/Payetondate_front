@@ -85,7 +85,7 @@ p a.nav-link {
 
 p a.nav-link:hover {
   text-decoration: none;
-  color: #14FF8E;
+  color: #b0b0b0 !important;
 }
 
 .link-register p {
