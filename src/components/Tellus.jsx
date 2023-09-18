@@ -50,7 +50,7 @@ export default function Tellus() {
   } catch (error) {
     console.error("Erreur lors de la création du témoignage : ", error);
   }
-};
+  };
 
   return (
     <>
