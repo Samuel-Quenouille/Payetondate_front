@@ -19,6 +19,21 @@ p{
     font-family: 'Inter', sans-serif;
 }
 
+/************* WELCOME *****************/ 
+.welcome-title, h2{
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.welcome-text{
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
 /************* LOGIN *****************/ 
 .top-title-login{
   margin-top: 80px;
