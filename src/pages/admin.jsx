@@ -8,7 +8,7 @@ export default function Admin() {
   const [places, setPlaces] = useState([]);
     
     useEffect(() => {
-      const fecthData = async () => {
+      const fetchData = async () => {
         try {
           const response = await fetch('http://localhost:3000/places', {
               method: 'GET',
@@ -29,7 +29,7 @@ export default function Admin() {
           }
       }
 
-      fecthData();
+      fetchData();
     }, []);
 
     const handleDelete = async (placeId) => {

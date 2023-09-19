@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body{
-    background-color: #232323 !important;
-    color: white;
-    font-family: 'Abril Fatface', cursive;
+  background-color: #232323 !important;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
 }
 
 ul{
@@ -16,7 +16,7 @@ ul{
 }
 
 p{
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /************* WELCOME *****************/ 
@@ -133,30 +133,30 @@ p a.nav-link:hover {
 
 /************* CATEGORIES *****************/ 
 .card{
-    width: 300px !important;
-    height: 300px !important;
-    border: none !important;
-    margin-bottom: 10px; /* Réduit l'espace vertical entre les cartes */
-    margin-left: 4rem;
+  width: 300px !important;
+  height: 300px !important;
+  border: none !important;
+  margin-bottom: 10px; /* Réduit l'espace vertical entre les cartes */
+  margin-left: 4rem;
 }
 
 .col{
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 .card-icon {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Pour placer l'icône au-dessus de l'image */
-    width: 50px !important; /* Ajustez la largeur selon vos besoins */
-    height: 50px !important; /* Ajustez la hauteur selon vos besoins */
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Pour placer l'icône au-dessus de l'image */
+  width: 50px !important; /* Ajustez la largeur selon vos besoins */
+  height: 50px !important; /* Ajustez la hauteur selon vos besoins */
   }
   
 .custom-image {
-    width: 300px !important; /* Largeur souhaitée */
-    height: 300px !important; /* Hauteur souhaitée */
-    object-fit: cover !important; /* Redimensionnement de l'image tout en maintenant son rapport d'aspect */
+  width: 300px !important; /* Largeur souhaitée */
+  height: 300px !important; /* Hauteur souhaitée */
+  object-fit: cover !important; /* Redimensionnement de l'image tout en maintenant son rapport d'aspect */
   }
 
   .btn-custom {
@@ -434,4 +434,21 @@ a{
 .navbar-nav {
   display: flex !important;
   align-items: center !important;
+}
+
+/************* Pages catégories *****************/
+
+.free-title {
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  font-size: 2.5rem;
+}
+
+
+
+.text-free {
+  color: white !important;
+  font-family: inherit;
+  font-size: 0.9em;
 }

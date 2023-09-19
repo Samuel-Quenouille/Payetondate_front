@@ -31,9 +31,6 @@ export default function Navbar() {
                     </>
                 ) : (
                     <> 
-                    {/* <Link className="nav-link" to="/register">
-                        Inscription
-                    </Link> */}
                     <div className=''>
                     <Link className="whitebtn" to="/login">
                         Connexion
