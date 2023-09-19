@@ -11,6 +11,7 @@ import Home from './pages/home';
 import Register from './pages/register';
 import Login from './pages/login';
 import Admin from './pages/admin';
+import Free from './pages/free';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/createplace" element={<CreatePlace />} />
+        <Route path="/free" element={<Free />} />
       </Routes>
     </BrowserRouter>
     </>
