@@ -78,7 +78,7 @@ export default function Tellus() {
 
         <div className="mb-3 text-tellus">
           <label htmlFor="description" className="form-label">Ton message</label>
-          <textarea value={description} onChange={handleDescriptionChange} type="message" className="form-control input-tellus" id="description" rows="6" placeholder="dites-nous tout ici !"/>
+          <textarea value={description} onChange={handleDescriptionChange} type="message" className="form-control input-tellus" id="description" rows="6" placeholder="Dites-nous tout ici !"/>
         </div>
         <br></br>
         <button type="submit" className="circle-btn text-circle-btn">Envoyer</button>

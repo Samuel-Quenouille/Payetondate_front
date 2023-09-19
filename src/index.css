@@ -19,6 +19,11 @@ p{
   font-family: 'Inter', sans-serif;
 }
 
+::placeholder{
+  padding-left: 10px;
+  color: #848383;
+}
+
 /************* WELCOME *****************/ 
 .welcome-title, h2{
   text-align: center;
@@ -32,6 +37,26 @@ p{
   text-align: center;
   font-weight: lighter;
   font-size: 0.9rem;
+}
+
+.search-bar{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 33px;
+  width: 30%;
+  color: white;
+  margin-top: 40px;
+}
+
+.form-inline .search-bar {
+  margin-right: -60px;
+}
+
+.search-button {
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 40px;
+  color: white;
 }
 
 /************* LOGIN *****************/ 

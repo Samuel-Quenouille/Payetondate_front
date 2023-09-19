@@ -38,7 +38,7 @@ export default function Categories() {
         <div className="card">
           <img src='src/assets/img/star.png' className="card-icon" alt="star Icon" />
           <img src="src/assets/img/balade.jpg" className="card-img-top custom-image" alt="insolite" />
-          <Link to="/free"className="btn btn-custom-5">Le date “gratuit”</Link> 
+          <a href="#" className="btn btn-custom-5">Le date “gratuit c’est encore mieux””</a>
         </div>
       </div>
     </div>
