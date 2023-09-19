@@ -67,7 +67,7 @@ export default function Admin() {
           setPlaces((prevState) =>
             prevState.map((place) =>
             place.id === placeId ? { ...place, is_validate: true } : place 
-            )
+            ).filter((place) => !place.is_validate)
           );
         } else {
           console.error("Erreur lors de la validation du lieu");
@@ -81,6 +81,7 @@ export default function Admin() {
       <div>
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {places.map((place) => (
+            !place.is_validate && (
             <div key={place.id} className="col">
               <div className="card">
                 <form>
@@ -108,6 +109,7 @@ export default function Admin() {
                 </form>
               </div>
             </div>
+            )
           ))}
         </div>
       </div>

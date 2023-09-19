@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BigGame() {
     const [places, setPlaces] = useState([]);
@@ -39,9 +40,14 @@ export default function BigGame() {
                 <h3>{place.title}</h3>
                 <p className="text-big_game">Description : {place.description}</p>
                 <p className="text-big_game">Adresse : {place.address}, {place.city} {place.borough}</p>
-                <p className="text-big_game">Prix : {place.price} €</p>
+                <p className="text-big_game">Prix : {place.price}</p>
               </li>
             ))}
+            <div className="return d-flex justify-content-end">
+                <Link to="/">
+                    <span>Retour</span>
+                </Link>
+            </div>
         </div>
     );
 }

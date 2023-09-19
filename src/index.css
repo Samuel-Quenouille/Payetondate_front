@@ -119,11 +119,11 @@ p{
   border: none;
 }
 
-p a.nav-link {
+.nav-link {
   text-decoration: underline;
 }
 
-p a.nav-link:hover {
+.nav-link:hover {
   text-decoration: none;
   color: #b0b0b0 !important;
 }
