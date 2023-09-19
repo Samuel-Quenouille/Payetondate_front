@@ -12,6 +12,9 @@ import Register from './pages/register';
 import Login from './pages/login';
 import Admin from './pages/admin';
 import Free from './pages/free';
+import Unusual from './pages/unusual';
+import BigGame from './pages/BigGame';
+import Kiss from './pages/kiss';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -41,6 +44,9 @@ export default function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/createplace" element={<CreatePlace />} />
         <Route path="/free" element={<Free />} />
+        <Route path="/unusual" element={<Unusual />} />
+        <Route path="/biggame" element={<BigGame />} />
+        <Route path="/kiss" element={<Kiss />} />
       </Routes>
     </BrowserRouter>
     </>

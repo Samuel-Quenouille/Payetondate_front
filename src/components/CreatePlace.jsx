@@ -120,9 +120,9 @@ export default function CreatePlace() {
             onChange={handlePriceChange}
           >
             <option value="Gratuit">Gratuit</option>
-    		    <option value="0-15">0 - 15 €</option>
-            <option value="15-30">15 - 30 €</option>
-            <option value="30 et +">A partir de 30 €</option>
+    		    <option value="0 - 15 €">0 - 15 €</option>
+            <option value="15 - 30 €">15 - 30 €</option>
+            <option value="A partir de 30 €">A partir de 30 €</option>
           </select>
         </div>
         <div>
@@ -134,7 +134,7 @@ export default function CreatePlace() {
             onChange={handleCategoryChange}
           >
             <option value="Histoire de">Histoire de</option>
-    		    <option value="Spot à bisou(s)">Spot à bisou(s)</option>
+    		    <option value="Spots à bisou(s)">Spots à bisou(s)</option>
     		    <option value="On sort le grand jeu">On sort le grand jeu</option>
     		    <option value="Insolite">Insolite</option>
             <option value="Gratuit">Gratuit</option>

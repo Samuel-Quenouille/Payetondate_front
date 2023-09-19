@@ -17,21 +17,21 @@ export default function Categories() {
         <div className="card">
           <img src='src/assets/img/cloud.png' className="card-icon" alt="Cloud Icon" />
           <img src="src/assets/img/lebisou.jpeg" className="card-img-top custom-image" alt="Spots à bisous" />
-          <a href="#" className="btn btn-custom-2">Le date “spots à bisou(s)”</a> 
+          <Link to="/kiss" className="btn btn-custom-2">Le date “spots à bisou(s)”</Link> 
         </div>
       </div>
       <div className="col">
         <div className="card">
           <img src='src/assets/img/coeurs.png' className="card-icon" alt="heart Icon" />
           <img src="src/assets/img/bouquet.jpg" className="card-img-top custom-image" alt="on sort le grand jeu" />
-          <a href="#" className="btn btn-custom-3">Le date “on sort le grand jeu”</a> 
+          <Link to="/biggame" className="btn btn-custom-3">Le date “on sort le grand jeu”</Link> 
         </div>
       </div>
       <div className="col">
         <div className="card">
-        <img src='src/assets/img/les-yeux.png' className="card-icon" alt="eyes Icon" />
+          <img src='src/assets/img/les-yeux.png' className="card-icon" alt="eyes Icon" />
           <img src="src/assets/img/montgolfière.jpg" className="card-img-top custom-image" alt="insolite" />
-          <a href="#" className="btn btn-custom-4">Le date “insolite”</a> 
+          <Link to="/unusual" className="btn btn-custom-4">Le date “insolite”</Link> 
         </div>
       </div>
       <div className="col">
