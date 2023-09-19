@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Free() {
     const [places, setPlaces] = useState([]);
@@ -42,6 +43,11 @@ export default function Free() {
                 <p className="text-free">Prix : {place.price}</p>
               </li>
             ))}
+            <div className="return d-flex justify-content-end">
+                <Link to="/">
+                    <span>Retour</span>
+                </Link>
+            </div>
         </div>
     );
 }

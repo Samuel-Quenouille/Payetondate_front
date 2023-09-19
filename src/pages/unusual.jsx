@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Unusual() {
     const [places, setPlaces] = useState([]);
@@ -39,9 +40,15 @@ export default function Unusual() {
                 <h3>{place.title}</h3>
                 <p className="text-unusual">Description : {place.description}</p>
                 <p className="text-unusual">Adresse : {place.address}, {place.city} {place.borough}</p>
-                <p className="text-unusual">Prix : {place.price} €</p>
+                <p className="text-unusual">Prix : {place.price}</p>
               </li>
             ))}
+            <div className="return d-flex justify-content-end">
+                <Link to="/">
+                    <span>Retour</span>
+                </Link>
+            </div>
         </div>
+
     );
 }
