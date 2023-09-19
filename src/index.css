@@ -19,6 +19,10 @@ p{
     font-family: 'Inter', sans-serif;
 }
 
+::placeholder{
+  padding-left: 10px;
+}
+
 /************* WELCOME *****************/ 
 .welcome-title, h2{
   text-align: center;
@@ -40,11 +44,18 @@ p{
   border-radius: 33px;
   width: 30%;
   color: white;
+  margin-top: 40px;
 }
 
-.bi-arrow-right-circle:hover{
-  background-color: white;
-  color: #232323;
+.form-inline .search-bar {
+  margin-right: -60px;
+}
+
+.search-button {
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 40px;
+  color: white;
 }
 
 /************* LOGIN *****************/ 
