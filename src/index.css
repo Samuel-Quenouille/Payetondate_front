@@ -34,6 +34,19 @@ p{
   font-size: 0.9rem;
 }
 
+.search-bar{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 33px;
+  width: 30%;
+  color: white;
+}
+
+.bi-arrow-right-circle:hover{
+  background-color: white;
+  color: #232323;
+}
+
 /************* LOGIN *****************/ 
 .top-title-login{
   margin-top: 80px;
