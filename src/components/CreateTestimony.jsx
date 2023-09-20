@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import '../index.css';
 
-export default function CreateTellus() {
+export default function CreateTestimony() {
   const [first_name, setFirstName] = useState('');
   const [age, setAge] = useState('');
   const [description, setDescription] = useState('');
