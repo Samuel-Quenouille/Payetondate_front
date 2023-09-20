@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import '../index.css';
 
-export default function Tellus() {
+export default function CreateTellus() {
   const [first_name, setFirstName] = useState('');
   const [age, setAge] = useState('');
   const [description, setDescription] = useState('');
@@ -37,7 +37,6 @@ export default function Tellus() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${user.token}`,
       },
       body: JSON.stringify(newTestimony),
     });
