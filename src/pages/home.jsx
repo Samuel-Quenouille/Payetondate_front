@@ -2,7 +2,7 @@ import Welcome from "../components/Welcome"
 import Categories from "../components/Categories"
 import TopFive from "../components/TopFive"
 import LoveLetters from "../components/LoveLetters"
-import Tellus from "../components/CreateTellus"
+import CreateTestimony from "../components/CreateTestimony"
 
 export default function Home() {
 
@@ -25,7 +25,7 @@ export default function Home() {
             <br></br>
             <br></br>
             <br></br>
-            <Tellus/>
+            <CreateTestimony/>
 
 
             </div>
