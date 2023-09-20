@@ -2,7 +2,7 @@ import Welcome from "../components/Welcome"
 import Categories from "../components/Categories"
 import TopFive from "../components/TopFive"
 import Letterlove from "../components/Letterlove"
-import Tellus from "../components/Tellus"
+import Tellus from "../components/CreateTellus"
 
 export default function Home() {
 
