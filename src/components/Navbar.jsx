@@ -6,6 +6,7 @@ import Logout from "../components/Logout";
 
 export default function Navbar() {
     const [user] = useAtom(userAtom);
+    
 
     return (
         <nav className="navbar navbar-expand p-2">
@@ -18,28 +19,27 @@ export default function Navbar() {
                         Articles
                     </Link>
                 </li>
-                <li className='flex-1'>
-                {user.isLoggedIn ? (
-                    <>
-                    <Link className="nav-link" to="/createplace">
-                        Créer un lieu
-                    </Link>
-                    <Link className="nav-link" to="/admin">
-                        Tableau de bord
-                    </Link>
-                    <Logout />
-                    </>
-                ) : (
-                    <> 
-                    <div className=''>
-                    <Link className="whitebtn" to="/login">
-                        Connexion
-                    </Link>
-                    </div>
-                    </>
-                )}
-              </li>
+                <li className="nav-item d-flex">
+                    {user.isLoggedIn ? (
+                        <>
+                            <Link className="nav-link" to="/createplace">
+                                Créer un lieu
+                            </Link>
+                                <Link className="nav-link" to="/admin">
+                                    Tableau de bord
+                                </Link>
+                            <Logout />
+                        </>
+                    ) : (
+                        <>
+                            <Link className="whitebtn" to="/login">
+                                Connexion
+                            </Link>
+                        </>
+                    )}
+                </li>
             </ul>
         </nav>
     )
+    
 }
