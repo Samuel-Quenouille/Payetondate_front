@@ -49,13 +49,16 @@ p{
 }
 
 .form-inline .search-bar {
-  margin-right: -60px;
+  margin-right: -5em;
 }
 
 .search-button {
   background-color: transparent;
   cursor: pointer;
   margin-top: 40px;
+}
+
+.search-button:hover{
   color: white;
 }
 
