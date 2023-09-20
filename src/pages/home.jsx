@@ -9,25 +9,23 @@ export default function Home() {
     return (
         <header>
             <div className="container">
-            <Welcome/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Categories/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <TopFive/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <LoveLetters/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <CreateTestimony/>
-
-
+                <Welcome/>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                <Categories/>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                <TopFive/>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                <LoveLetters/>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                <CreateTestimony/>
             </div>
         </header>
 
