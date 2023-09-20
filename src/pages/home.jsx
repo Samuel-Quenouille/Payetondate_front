@@ -1,7 +1,7 @@
 import Welcome from "../components/Welcome"
 import Categories from "../components/Categories"
 import TopFive from "../components/TopFive"
-import Letterlove from "../components/Letterlove"
+import LoveLetters from "../components/LoveLetters"
 import Tellus from "../components/CreateTellus"
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
             <br></br>
             <br></br>
             <br></br>
-            <Letterlove/>
+            <LoveLetters/>
             <br></br>
             <br></br>
             <br></br>
