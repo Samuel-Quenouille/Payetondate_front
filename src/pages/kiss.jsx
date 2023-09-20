@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import buttes_chaumont from '../assets/img/buttes_ chaumont.jpg';
+import beaubourg from '../assets/img/beaubourg.jpg'
+import cloudIcon from '../assets/img/cloud.png';
 
 export default function Kiss() {
     const [places, setPlaces] = useState([]);
@@ -34,7 +37,32 @@ export default function Kiss() {
 
     return (
         <div className="container">
-          <h1 className="kiss-title">Spots à bisou(s)</h1>
+            <div className="return d-flex justify-content-end">
+                <Link to="/">
+                    <span>Retour</span>
+                </Link>
+            </div>
+            <img src={cloudIcon} alt="Cloud Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '510px', marginTop: '-15px' }} />
+                <h1 className="kiss-title" style={{position: 'relative'}}>Spots à bisou(s)</h1>
+                
+            <div className="image-and-content">
+                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='buttes-chaumont-img' />
+            <div className="content">
+                <p alt='Photo cabine' style={{color:'white'}}>Le centre Pompidou, Place Georges-Pompidou, 75004 Paris</p>
+                <p className='spot-description'>Découvrez ensemble l'art contemporain sous toutes ses facettes et laissez-vous emporter par la créativité et l'inspiration qui émanent de ce lieu emblématique de Paris. </p>
+                <p>Fourchette de prix: 12-18€</p>
+                <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
+            </div>
+            </div>
+            <div className="image-and-content">
+                <img src={buttes_chaumont} alt='buttes chaumont' style={{width:'20%'}} className='buttes-chaumont-img' />
+                <div className="content">
+                    <p alt='Photo cabine' style={{color:'white'}}>Photo cabine, Avenue Darcel, parc des Buttes Chaumonts, 75019 Paris</p>
+                    <p className='spot-description'>Situé dans le parc des Buttes Chaumont au pied du Pavillon Puebla, ce photomaton est idéal pour capturer un moment magique.</p>
+                    <p>Fouchette de prix: 3€</p>
+                    <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
+                </div>
+            </div>
             {places.map((place) => (
               <li key={place.id}>
                 <h3>{place.title}</h3>
@@ -43,11 +71,6 @@ export default function Kiss() {
                 <p className="text-kiss">Prix : {place.price}</p>
               </li>
             ))}
-            <div className="return d-flex justify-content-end">
-                <Link to="/">
-                    <span>Retour</span>
-                </Link>
-            </div>
         </div>
     );
 }

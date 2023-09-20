@@ -470,10 +470,45 @@ a{
   font-size: 2.5rem;
 }
 
-
-
 .text-free, .text-unusual, .text-big_game, .text-kiss {
   color: white !important;
   font-family: inherit;
   font-size: 0.9em;
 }
+
+
+/************* SPOT À BISOU(S) *****************/
+.image-and-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.buttes-chaumont-img {
+  padding-top: 150px;
+  width: 20%;
+  border-radius: 8px;
+  margin-right: 90px;
+}
+
+.content {
+  color: white;
+  width: 50%;
+  padding-top: 170px;
+}
+
+.spot-description{
+  font-weight: lighter;
+}
+
+.btn-map{
+  font-weight: 400;
+  margin-left: 250px;
+  margin-top: 30px;
+}
+
+.btn-map:hover{
+  background-color: #FF95BB;
+}
+
+
