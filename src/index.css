@@ -572,9 +572,14 @@ button:focus-visible {
   text-decoration: none;
 }
 
+.navbar a.active {
+  text-decoration: underline !important;
+}
+
 a{
   color: white !important;
 }
+
 
 .whitebtn {
   width: 100px;
