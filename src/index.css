@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px){
 /************* Navbar *****************/
 .navbar {
   background-color: #232323;
@@ -60,7 +60,7 @@ a{
   
   .btn-map{
     font-weight: 400;
-    margin-left: 50px !important;
+    margin-left: 60px !important;
     margin-top: 50px !important;
     align-items: center !important;
     font-size: 0.6em !important;
@@ -87,6 +87,60 @@ a{
   .spot-description{
     font-weight: lighter !important;
   }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+    /************* KISS SPOTS *****************/
+    .kiss-title{
+      font-size: 2em !important;
+      padding-top: 110px;
+      text-align: center !important;
+      position: relative;
+    }
+  
+    .category-icon{
+      padding-top: 120px;
+      position: absolute;
+      margin-left: 245px !important;
+      width: 5% !important;
+      
+    }
+  
+    .kiss-spot-img {
+      padding-top: 100px !important;
+      width: 30% !important;
+      border-radius: 8px;
+      margin-left: 90px !important;
+    }
+    
+    .btn-map{
+      font-weight: 300;
+      margin-left: 110px !important;
+      margin-top: 20px !important;
+      align-items: center !important;
+      font-size: 0.8em !important;
+      width: 80px !important;
+      height: 80px !important;
+    }
+  
+    .btn-map:hover{
+      background-color: #FF95BB;
+    }
+    
+    .content{
+      width: 60% !important;
+      padding-top: 130px !important;
+      font-size: 0.8em !important;
+    }
+  
+    .image-and-content{
+      text-align: justify;
+      align-items: center;
+    }
+  
+    .spot-description{
+      font-weight: lighter !important;
+    }
 }
 
 body{

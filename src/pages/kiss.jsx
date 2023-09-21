@@ -39,7 +39,7 @@ export default function Kiss() {
         <div className="container">
             <img src={cloudIcon} alt="Cloud Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '510px', marginTop: '-15px' }} />
             <h1 className="kiss-title" style={{position: 'relative'}}>Spots à bisou(s)</h1>
-            <div className="d-flex justify-content-end">
+            <div className="d-flex justify-content-start">
                 <Link to="/">
                     <span className='return-link'>Retour</span>
                 </Link>

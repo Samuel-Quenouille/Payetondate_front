@@ -52,6 +52,11 @@ export default function Login() {
 
   return (
     <div className="form_signin container d-flex justify-content-center">
+      <div className="return-link d-flex justify-content-start">
+        <Link to="/">
+          <span>Retour</span>
+        </Link>
+        </div>
       <form onSubmit={handleLogin}>
         <h1 className="top-title-login">Se connecter</h1>
           {error && <p>{error}</p>}
@@ -82,11 +87,6 @@ export default function Login() {
         </div>
         <div className="button-login">
           <button type="submit">Se connecter</button>
-        </div>
-        <div className="return d-flex justify-content-end">
-        <Link to="/">
-          <span>Retour</span>
-        </Link>
         </div>
       </form>
     </div>
