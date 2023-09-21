@@ -6,6 +6,7 @@ import {useParams} from 'react-router-dom'
 
 export default function Admin() {
   const [places, setPlaces] = useState([]);
+  const [testimonies, setTestimonies] = useState([]);
     
     useEffect(() => {
       const fetchDataPlace = async () => {
@@ -31,8 +32,6 @@ export default function Admin() {
 
       fetchDataPlace();
     }, []);
-
-    const [testimonies, setTestimonies] = useState([]);
 
     useEffect(() => {
       const fetchDataTestimony = async () => {

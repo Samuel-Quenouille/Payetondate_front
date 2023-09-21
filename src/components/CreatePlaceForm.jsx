@@ -13,6 +13,7 @@ export default function CreatePlace() {
   const [borough, setBorough] = useState('');
   const [url, setUrl] = useState('');
   const [user] = useAtom(userAtom);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -82,6 +83,19 @@ export default function CreatePlace() {
 
       if (response.ok) {
         console.log('Votre annonce a été créée avec succès');
+        setShowAlert(true);
+        setTitle('');
+        setDescription('');
+        setPrice('');
+        setCategory('');
+        setAddress('');
+        setZipCode('');
+        setCity('');
+        setBorough('');
+        setUrl('');
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 3000);
       } else {
         console.error("Erreur lors de la création de l'annonce");
       }
@@ -92,6 +106,11 @@ export default function CreatePlace() {
 
   return (
     <div className="create_place container">
+      {showAlert && (
+        <div className="alert alert-success" role="alert">
+          Votre témoignage a été créé avec succès
+        </div>
+      )}
       <h2>Création d'un lieu</h2>
       <form onSubmit={handleSubmit}>
         <div>
