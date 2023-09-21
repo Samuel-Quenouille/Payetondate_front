@@ -6,7 +6,7 @@
 .navbar {
   background-color: #232323;
   color: white !important;
-  font-family: inter;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   font-size: 0.6rem;
 }
@@ -31,7 +31,7 @@ a{
   text-align: center;
   text-decoration: none;
 }
-  /************* KISS SPOTS *****************/
+  /************* SPOTS *****************/
   .kiss-title{
     font-size: 1.5em !important;
     padding-top: 110px;
@@ -51,14 +51,14 @@ a{
     opacity: 0% !important;
   }
 
-  .kiss-spot-img {
-    padding-top: 60px !important;
+  .spot-img {
+    margin-top: 60px !important;
     width: 50% !important;
     border-radius: 8px;
     margin-left: 90px !important;
   }
   
-  .btn-map{
+  .btn-map-2{
     font-weight: 400;
     margin-left: 60px !important;
     margin-top: 50px !important;
@@ -68,8 +68,22 @@ a{
     height: 60px !important;
   }
 
-  .btn-map:hover{
+  .btn-map-2:hover{
     background-color: #FF95BB;
+  }
+
+  .btn-map-3{
+    font-weight: 300;
+    margin-left: 110px !important;
+    margin-top: 20px !important;
+    align-items: center !important;
+    font-size: 0.8em !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .btn-map-3:hover{
+    background-color: #EA4231;
   }
   
   .content{
@@ -90,7 +104,7 @@ a{
 }
 
 @media screen and (min-width: 820px) and (max-width: 1180px) {
-    /************* KISS SPOTS *****************/
+    /************* SPOTS *****************/
     .kiss-title{
       font-size: 2em !important;
       padding-top: 110px;
@@ -106,14 +120,14 @@ a{
       
     }
   
-    .kiss-spot-img {
-      padding-top: 100px !important;
+    .spot-img {
+      margin-top: 100px !important;
       width: 30% !important;
       border-radius: 8px;
       margin-left: 90px !important;
     }
     
-    .btn-map{
+    .btn-map-2{
       font-weight: 300;
       margin-left: 110px !important;
       margin-top: 20px !important;
@@ -123,8 +137,22 @@ a{
       height: 80px !important;
     }
   
-    .btn-map:hover{
+    .btn-map-2:hover{
       background-color: #FF95BB;
+    }
+
+    .btn-map-3{
+      font-weight: 300;
+      margin-left: 110px !important;
+      margin-top: 20px !important;
+      align-items: center !important;
+      font-size: 0.8em !important;
+      width: 80px !important;
+      height: 80px !important;
+    }
+  
+    .btn-map-3:hover{
+      background-color: #EA4231;
     }
     
     .content{
@@ -450,16 +478,6 @@ p{
   background-color: #14FF8E;
 }
 
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-} */
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -568,7 +586,7 @@ button:focus-visible {
 .navbar {
   background-color: #232323;
   color: white !important;
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
 }
 
@@ -627,15 +645,15 @@ a{
 }
 
 
-/************* SPOT À BISOU(S) *****************/
+/************* SPOTS *****************/
 .image-and-content {
   display: flex;
   align-items: center;
   justify-content: center; 
 }
 
-.kiss-spot-img {
-  padding-top: 150px;
+.spot-img {
+  margin-top: 150px;
   width: 20%;
   border-radius: 8px;
   margin-right: 90px;
@@ -644,21 +662,31 @@ a{
 .content {
   color: white;
   width: 50%;
-  padding-top: 170px;
+  margin-top: 180px;
 }
 
 .spot-description{
-  font-weight: lighter;
+  font-weight: 100 !important;
 }
 
-.btn-map{
+.btn-map-2{
   font-weight: 400;
   margin-left: 250px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.btn-map:hover{
+.btn-map-2:hover{
   background-color: #FF95BB;
+}
+
+.btn-map-3{
+  font-weight: 400;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+
+.btn-map-3:hover{
+  background-color: #EA4231;
 }
 
 /************* History Of *****************/

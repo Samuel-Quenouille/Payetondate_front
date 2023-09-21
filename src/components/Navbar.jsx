@@ -1,42 +1,45 @@
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
-import { NavLink } from 'react-router-dom'; // Utilisez NavLink au lieu de Link
+import { Link } from 'react-router-dom';
 import Logout from "../components/Logout";
+
 
 export default function Navbar() {
     const [user] = useAtom(userAtom);
+    
 
     return (
         <nav className="navbar navbar-expand p-2">
             <ul className="navbar-nav d-flex align-items-center justify-content-between w-100">
                 <li className="nav-item d-flex">
-                    <NavLink exact activeClassName="active" className="nav-link" to="/"> {/* Utilisez NavLink */}
+                    <Link className="nav-link" to="/">
                         Accueil
-                    </NavLink>
-                    <NavLink activeClassName="active" className="nav-link" to="/articles"> {/* Utilisez NavLink */}
+                    </Link>
+                    <Link className="nav-link" to="#">
                         Articles
-                    </NavLink>
+                    </Link>
                 </li>
                 <li className="nav-item d-flex">
                     {user.isLoggedIn ? (
                         <>
-                            <NavLink activeClassName="active" className="nav-link" to="/createplace"> {/* Utilisez NavLink */}
+                            <Link className="nav-link" to="/createplace">
                                 Créer un lieu
-                            </NavLink>
-                            <NavLink activeClassName="active" className="nav-link" to="/admin"> {/* Utilisez NavLink */}
-                                Tableau de bord
-                            </NavLink>
+                            </Link>
+                                <Link className="nav-link" to="/admin">
+                                    Tableau de bord
+                                </Link>
                             <Logout />
                         </>
                     ) : (
                         <>
-                            <NavLink activeClassName="active" className="whitebtn" to="/login"> {/* Utilisez NavLink */}
+                            <Link className="whitebtn" to="/login">
                                 Connexion
-                            </NavLink>
+                            </Link>
                         </>
                     )}
                 </li>
             </ul>
         </nav>
     )
+    
 }

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import coeur from '../assets/img/coeur.png'
+import restaurant_theleme from '../assets/img/theleme.jpg';
+import restaurant_terra from '../assets/img/terra.jpg'
 
 export default function BigGame() {
     const [places, setPlaces] = useState([]);
@@ -34,7 +37,35 @@ export default function BigGame() {
 
     return (
         <div className="container">
-          <h1 className="big_game-title">On sort le grand jeu</h1>
+          <img src={coeur} alt="Heart Icon" className="category-icon" style={{ width: '3%', position: 'absolute', marginLeft: '490px', marginTop: '5px' }} />
+            <h1 className="kiss-title" style={{position: 'relative'}}>On sort le grand jeu</h1>
+          <div className="d-flex justify-content-start">
+                <Link to="/">
+                    <span className='return-link'>Retour</span>
+                </Link>
+            </div>
+            <div className="image-and-content">
+                <img src={restaurant_theleme} alt='La Scène Thélème' style={{width:'20%'}} className='spot-img' />
+                <div className="content">
+                    <p className='spot-title' style={{color:'white'}}><b>La Scène Thélème</b>, 18 Rue Troyon, 75017 Paris</p>
+                    <p className='spot-description'> Ce restaurant marie l'art et la gastronomie, proposant parfois des représentations théâtrales avant le dîner. 
+                    Le chef japonais Yoshitaka Takayanagi offre une cuisine fine et subtile avec des produits de qualité. 
+                    Une expérience idéale pour sortir le grand jeu lors d'un rendez-vous amoureux à Paris.</p>
+                    <p>Fourchette de prix: 100€</p>
+                    <button type="submit" className="circle-btn btn-map-3">Voir sur la map</button>
+                </div>
+            </div>
+            <div className="image-and-content">
+                <img src={restaurant_terra} alt='Terra' style={{width:'20%'}} className='spot-img' />
+                <div className="content">
+                    <p className='spot-title' style={{color:'white'}}><b>Terra</b>, 21 rue des Gravilliers, Paris, 75003</p>
+                    <p className='spot-description'> Ce restaurant marie l'art et la gastronomie, proposant parfois des représentations théâtrales avant le dîner. 
+                    Le chef japonais Yoshitaka Takayanagi offre une cuisine fine et subtile avec des produits de qualité. 
+                    Une expérience idéale pour sortir le grand jeu lors d'un rendez-vous amoureux à Paris.</p>
+                    <p>Fourchette de prix: 100€</p>
+                    <button type="submit" className="circle-btn btn-map-3">Voir sur la map</button>
+                </div>
+            </div>
             {places.map((place) => (
               <li key={place.id}>
                 <h3>{place.title}</h3>
@@ -43,11 +74,6 @@ export default function BigGame() {
                 <p className="text-big_game">Prix : {place.price}</p>
               </li>
             ))}
-            <div className="return d-flex justify-content-end">
-                <Link to="/">
-                    <span>Retour</span>
-                </Link>
-            </div>
         </div>
     );
 }
