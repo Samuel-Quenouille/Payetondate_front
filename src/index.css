@@ -602,4 +602,21 @@ a{
   background-color: #FF95BB;
 }
 
+/************* History Of *****************/
+
+.title_categoriespage {
+  margin-top: 7%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px; /* Ajustez la taille de la police du titre */
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle_categoriespage {
+  font-family: inherit;
+  text-align: center;
+  font-size: 18px; /* Ajustez la taille de la police du sous-titre */
+  color:#ffffff
+}
+
 
