@@ -15,6 +15,7 @@ import Free from './pages/free';
 import Unusual from './pages/unusual';
 import BigGame from './pages/BigGame';
 import Kiss from './pages/kiss';
+import Historyof from './pages/history';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/unusual" element={<Unusual />} />
         <Route path="/biggame" element={<BigGame />} />
         <Route path="/kiss" element={<Kiss />} />
+        <Route path="/historyof" element={<Historyof />} />
       </Routes>
     </BrowserRouter>
     </>
