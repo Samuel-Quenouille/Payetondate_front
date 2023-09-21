@@ -20,7 +20,7 @@ export default function Categories() {
         <div className="card">
           <img src={tonnerre} className="card-icon" alt="storm Icon" />
           <img src={baby_foot} className="card-img-top custom-image" alt="Histoire de" />
-          <a href="#" className="btn btn-custom">Le date “histoire de”</a> 
+          <Link to="/historyof" className="btn btn-custom">Le date “histoire de”</Link> 
         </div>
       </div>
       <div className="col">
