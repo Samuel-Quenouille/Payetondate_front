@@ -66,6 +66,7 @@ export default function CreatePlace() {
         city: city,
         borough: borough,
         url: url,
+        user_id: user.id,
       }
     };
 

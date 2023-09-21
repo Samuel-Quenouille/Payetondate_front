@@ -8,6 +8,7 @@ export default function CreateTestimony() {
   const [age, setAge] = useState('');
   const [description, setDescription] = useState('');
   const [user] = useAtom(userAtom);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
@@ -43,6 +44,13 @@ export default function CreateTestimony() {
 
     if (response.ok) {
       console.log('Votre témoignage a été créé avec succès');
+      setShowAlert(true);
+      setFirstName('');
+      setAge('');
+      setDescription('');
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
     } else {
       console.error("Erreur lors de la création du témoignage");
     }
@@ -62,6 +70,11 @@ export default function CreateTestimony() {
       <br></br>
       <br></br>
 
+      {showAlert && (
+        <div className="alert alert-success" role="alert">
+          Votre témoignage a été créé avec succès
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
         <div className="row g-3 text-tellus">
           <div className="col">
