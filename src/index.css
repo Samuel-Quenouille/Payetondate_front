@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
+/************* IPHONE 4 *****************/
 @media screen and (min-width: 320px) and (max-width: 480px){
+
 /************* Navbar *****************/
 .navbar {
   background-color: #232323;
@@ -33,22 +36,21 @@ a{
 }
   /************* SPOTS *****************/
   .kiss-title{
-    font-size: 1.5em !important;
+    font-size: 0.6em !important;
     padding-top: 110px;
     text-align: center !important;
-    position: relative;
   }
 
   .category-icon{
-    padding-top: 120px;
+    padding-top: 20px;
     position: absolute;
-    margin-left: 100px !important;
+    margin-left: 40px !important;
     width: 10% !important;
     
   }
 
   .heart-icon{
-    padding-top: 105px;
+    padding-top: 10px;
     position: absolute;
     margin-left: 100px !important;
     width: 8% !important;
@@ -110,7 +112,9 @@ a{
   }
 }
 
+/*********************** IPAD AIR ***************************/
 @media screen and (min-width: 820px) and (max-width: 1180px) {
+
     /************* SPOTS *****************/
     .kiss-title{
       font-size: 2em !important;
@@ -120,11 +124,18 @@ a{
     }
   
     .category-icon{
-      padding-top: 120px;
+      padding-top: 19px;
       position: absolute;
-      margin-left: 245px !important;
+      margin-left: 190px !important;
       width: 5% !important;
       
+    }
+
+    .heart-icon{
+      padding-top: 3px;
+      position: absolute;
+      margin-left: 150px !important;
+      width: 6% !important;
     }
   
     .spot-img {
@@ -136,8 +147,8 @@ a{
     
     .btn-map-2{
       font-weight: 300;
-      margin-right: 150px !important;
-      margin-top: 20px !important;
+      margin-left: 110px !important;
+      margin-top: 10px !important;
       align-items: center !important;
       font-size: 0.8em !important;
       width: 80px !important;
@@ -164,7 +175,7 @@ a{
     
     .content{
       width: 60% !important;
-      padding-top: 10px !important;
+      margin-top: 110px !important;
       font-size: 0.8em !important;
     }
   
@@ -177,6 +188,7 @@ a{
       font-weight: lighter !important;
     }
 }
+
 
 body{
   background-color: #232323 !important;
@@ -653,7 +665,6 @@ a{
 
 
 /************* SPOTS *****************/
-
 .image-and-content {
   display: flex;
   align-items: center;
@@ -707,6 +718,16 @@ a{
 
 .btn-map-3:hover{
   background-color: #EA4231;
+}
+
+.btn-map-4{
+  font-weight: 400;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+
+.btn-map-4:hover{
+  background-color: #EFCE6E;
 }
 
 /************* History Of *****************/
