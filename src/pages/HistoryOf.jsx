@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useAtom } from 'jotai';
-import { userAtom } from '../atom';
+import { Link } from 'react-router-dom';
 import '../index.css';
 import tonnerre from '../assets/img/tonnerre.png';
 import player_one from '../assets/img/player_one.jpg';
@@ -43,9 +42,13 @@ export default function HistoryOf() {
         <img src={tonnerre} alt="Cloud Icon" className="category-icon" style={{ width: '7%', position: 'absolute', marginLeft: '510px', marginTop: '-15px' }} />
         <h1 className="title_categoriespage" style={{position: 'relative'}}>Histoire de</h1>
         <h6 className='subtitle_categoriespage' style={{position: 'relative'}}>avant de conclure</h6>
-
+        <div className="d-flex justify-content-start">
+                <Link to="/">
+                    <span className='return-link'>Retour</span>
+                </Link>
+        </div>
         <div className="image-and-content">
-            <img src={player_one} alt='Bar Player One' style={{width:'20%'}} className='buttes-chaumont-img' />
+            <img src={player_one} alt='Bar Player One' style={{width:'20%'}} className='spot-img' />
             <div className="content">
               <p alt='Photo cabine' style={{color:'white'}}><b>Player One</b>, 224 rue Saint-Denis, 75002 Paris</p>
               <p className='spot-description'>Décoré dans le style des années 90, ce lieu propose des jeux vidéo rétro et un sous-sol dédié aux jeux de société.</p>
@@ -54,7 +57,7 @@ export default function HistoryOf() {
             </div>
         </div>
         <div className="image-and-content">
-            <img src={adada} alt='Bar Adada' style={{width:'20%'}} className='buttes-chaumont-img' />
+            <img src={adada} alt='Bar Adada' style={{width:'20%'}} className='spot-img' />
             <div className="content">
               <p alt='Photo cabine' style={{color:'white'}}><b>L'Adada Bar</b>, 15 rue du Maine, 75014 Paris</p>
               <p className='spot-description'>Restaurant de brunch prisé avec cocktails maison et musique tendance dans un cadre animé peint de couleur vive.</p>
@@ -65,7 +68,7 @@ export default function HistoryOf() {
 
         {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
-                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='buttes-chaumont-img' />
+                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
                   <h3>{place.title}</h3>
                   <br></br>

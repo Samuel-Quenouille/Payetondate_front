@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
+import { isAdminAtom } from '../atom'
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 
 export default function Login() {
   const [, setUser] = useAtom(userAtom);
+  const [isAdmin, setIsAdmin] = useAtom(isAdminAtom);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,11 +35,19 @@ export default function Login() {
       if (response.ok) {
         console.log('Vous êtes connecté');
         const data = await response.json();
+        const is_admin = data.user.is_admin
 
         Cookies.set('token', response.headers.get("Authorization"));
         Cookies.set('id', data.user.id);
 
+
         navigate('/')
+
+        if (is_admin) {
+          setIsAdmin(true);
+      } else {
+          setIsAdmin(false);
+      }
 
         setUser({
           isLoggedIn: true,

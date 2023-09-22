@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import yeux from '../assets/img/yeux.png'
 import fromage from '../assets/img/fromage.jpg'
+import arcade from '../assets/img/arcade.jpg'
 
 export default function Unusual() {
     const [places, setPlaces] = useState([]);
@@ -36,7 +37,7 @@ export default function Unusual() {
 
     return (
         <div className="container">
-        <img src={yeux} alt="Eye Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '556px', marginTop: '86px' }} />
+        <img src={yeux} alt="Eye Icon" className="eye-icon" style={{ width: '5%', position: 'absolute', marginLeft: '555px', marginTop: '-32px' }} />
         <h1 className="kiss-title" style={{position: 'relative'}}>Insolite</h1>
         <div className="d-flex justify-content-start">
             <Link to="/">
@@ -50,6 +51,17 @@ export default function Unusual() {
                     <p className='spot-description'>Amateurs de fromage et de vin, embarquez pour un voyage insolite ! Accompagnés par des fromagers experts, plongez dans l'univers des fromages et explorez leurs nuances uniques. 
                     Laissez-vous emporter par cette expérience sensorielle qui éveillera vos sens et fera danser vos papilles.</p>
                     <p>Fourchette de prix: 70€</p>
+                    <button type="submit" className="circle-btn btn-map-4">Voir sur la map</button>
+                </div>
+            </div>
+            <div className="image-and-content">
+                <img src={arcade} alt='Arcade' style={{width:'20%'}} className='spot-img' />
+                <div className="content">
+                    <p className='spot-title' style={{color:'white'}}><b>La tête dans les nuages</b>, 5 Bd des Italiens, 75002 Paris</p>
+                    <p className='spot-description'>La salle de jeux 'La Tête dans les Nuages' est un paradis ludique, un monde d'amusement débordant où les rires et la joie règnent en maîtres. 
+                    Ses étages regorgent de jeux d'arcade, de défis interactifs et d'activités divertissantes. 
+                    C'est l'endroit parfait pour créer des souvenirs mémorables.</p>
+                    <p>Fourchette de prix: 15-20€</p>
                     <button type="submit" className="circle-btn btn-map-4">Voir sur la map</button>
                 </div>
             </div>

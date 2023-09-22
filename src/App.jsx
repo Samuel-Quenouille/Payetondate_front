@@ -16,6 +16,7 @@ import Unusual from './pages/unusual';
 import BigGame from './pages/BigGame';
 import Kiss from './pages/kiss';
 import HistoryOf from './pages/HistoryOf';
+import Zodiacpost from './pages/zodiacpost';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/biggame" element={<BigGame />} />
         <Route path="/kiss" element={<Kiss />} />
         <Route path="/historyof" element={<HistoryOf />} />
+        <Route path="/zodiacpost" element={<Zodiacpost />} />
       </Routes>
     </BrowserRouter>
     </>

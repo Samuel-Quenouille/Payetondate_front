@@ -665,13 +665,6 @@ a{
 
 
 /************* SPOTS *****************/
-.kiss-title{
-  font-size: 3em !important;
-  padding-top: 110px;
-  text-align: center !important;
-  position: relative;
-}
-
 .image-and-content {
   display: flex;
   align-items: center;
@@ -694,6 +687,17 @@ a{
 .spot-description{
   font-weight: 100 !important;
 }
+
+.btn-map{
+  font-weight: 400;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.btn-map:hover{
+  background-color: #A479FF;
+}  
 
 .btn-map-2{
   font-weight: 400;
@@ -731,7 +735,7 @@ a{
 .title_categoriespage {
   margin-top: 7%;
   font-family: 'Abril Fatface', cursive;
-  font-size: 60px; /* Ajustez la taille de la police du titre */
+  font-size: 60px;
   color: #ffffff;
   text-align: center;
 }
@@ -739,7 +743,7 @@ a{
 .subtitle_categoriespage {
   font-family: inherit;
   text-align: center;
-  font-size: 18px; /* Ajustez la taille de la police du sous-titre */
+  font-size: 18px;
   color:#ffffff
 }
 
@@ -753,4 +757,23 @@ a{
   text-align: center;
 }
 
+/************* Zodiac post *****************/
 
+.title_post {
+  margin-top: 10%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle_post {
+  font-family: inherit;
+  font-size: 18px;
+  color:#ffffff
+}
+
+.content_post {
+  font-family: inherit;
+  color:#ffffff;
+}
