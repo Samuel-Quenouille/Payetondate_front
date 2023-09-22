@@ -653,6 +653,7 @@ a{
 
 
 /************* SPOTS *****************/
+
 .image-and-content {
   display: flex;
   align-items: center;
@@ -675,6 +676,17 @@ a{
 .spot-description{
   font-weight: 100 !important;
 }
+
+.btn-map{
+  font-weight: 400;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.btn-map:hover{
+  background-color: #A479FF;
+}  
 
 .btn-map-2{
   font-weight: 400;
