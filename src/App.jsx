@@ -6,7 +6,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar";
-import CreatePlace from './components/CreatePlace';
+import CreatePlace from './pages/CreatePlace';
 import Home from './pages/home';
 import Register from './pages/register';
 import Login from './pages/login';
@@ -15,7 +15,7 @@ import Free from './pages/free';
 import Unusual from './pages/unusual';
 import BigGame from './pages/BigGame';
 import Kiss from './pages/kiss';
-import Historyof from './pages/history';
+import HistoryOf from './pages/HistoryOf';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -48,7 +48,7 @@ export default function App() {
         <Route path="/unusual" element={<Unusual />} />
         <Route path="/biggame" element={<BigGame />} />
         <Route path="/kiss" element={<Kiss />} />
-        <Route path="/historyof" element={<Historyof />} />
+        <Route path="/historyof" element={<HistoryOf />} />
       </Routes>
     </BrowserRouter>
     </>

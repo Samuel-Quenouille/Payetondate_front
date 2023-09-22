@@ -706,4 +706,14 @@ a{
   color:#ffffff
 }
 
+/************* Create Place Form *****************/
+
+.title-placeform {
+  margin-top: 7%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px; /* Ajustez la taille de la police du titre */
+  color: #ffffff;
+  text-align: center;
+}
+
 
