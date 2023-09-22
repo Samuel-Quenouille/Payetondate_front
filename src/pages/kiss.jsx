@@ -50,7 +50,7 @@ export default function Kiss() {
                     <p className='spot-title' style={{color:'white'}}><b>Le centre Pompidou</b>, Place Georges-Pompidou, 75004 Paris</p>
                     <p className='spot-description'>Découvrez ensemble l'art contemporain sous toutes ses facettes et laissez-vous emporter par la créativité et l'inspiration qui émanent de ce lieu emblématique de Paris.</p>
                     <p>Fourchette de prix: 12-18€</p>
-                    <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
+                    <button type="submit" className="circle-btn btn-map-2">Voir sur la map</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@ export default function Kiss() {
                     <p style={{color:'white'}}><b>Photo cabine</b>, Avenue Darcel, parc des Buttes Chaumonts, 75019 Paris</p>
                     <p className='spot-description'>Situé dans le parc des Buttes Chaumont au pied du Pavillon Puebla, ce photomaton est idéal pour capturer un moment magique.</p>
                     <p>Fourchette de prix: 3€</p>
-                    <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
+                    <button type="submit" className="circle-btn btn-map-2">Voir sur la map</button>
                 </div>
             </div>
 
