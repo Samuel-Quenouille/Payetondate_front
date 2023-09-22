@@ -13,6 +13,7 @@ export default function CreatePlace() {
   const [borough, setBorough] = useState('');
   const [url, setUrl] = useState('');
   const [user] = useAtom(userAtom);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -82,6 +83,19 @@ export default function CreatePlace() {
 
       if (response.ok) {
         console.log('Votre annonce a été créée avec succès');
+        setShowAlert(true);
+        setTitle('');
+        setDescription('');
+        setPrice('');
+        setCategory('');
+        setAddress('');
+        setZipCode('');
+        setCity('');
+        setBorough('');
+        setUrl('');
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 3000);
       } else {
         console.error("Erreur lors de la création de l'annonce");
       }
@@ -92,24 +106,31 @@ export default function CreatePlace() {
 
   return (
     <div className="create_place container">
-      <h2>Création d'un lieu</h2>
+      {showAlert && (
+        <div className="alert alert-success" role="alert">
+          Votre témoignage a été créé avec succès
+        </div>
+      )}
+      <h1 className="title-placeform">Création d'un lieu</h1>
       <form onSubmit={handleSubmit}>
+      <br></br>
         <div>
-          <label htmlFor="title">Titre :</label>
-          <br></br>
           <input
             id="title"
             value={title}
             onChange={handleTitleChange}
+            className="custom-input"
+            placeholder="Nom du lieu"
           />
         </div>
+        <br></br>
         <div>
-          <label htmlFor="description">Description :</label>
-          <br></br>
           <textarea
             id="description"
             value={description}
             onChange={handleDescriptionChange}
+            className="custom-input"
+            placeholder="Description"
           />
         </div>
         <div>
@@ -119,6 +140,7 @@ export default function CreatePlace() {
             id="price"
             value={price}
             onChange={handlePriceChange}
+            className="custom-input"
           >
             <option value="Gratuit">Gratuit</option>
     		    <option value="0 - 15 €">0 - 15 €</option>
@@ -133,6 +155,7 @@ export default function CreatePlace() {
             id="category"
             value={category}
             onChange={handleCategoryChange}
+            className="custom-input"
           >
             <option value="Histoire de">Histoire de</option>
     		    <option value="Spots à bisou(s)">Spots à bisou(s)</option>
@@ -141,40 +164,43 @@ export default function CreatePlace() {
             <option value="Gratuit">Gratuit</option>
           </select>
         </div>
+        <br></br>
         <div>
-          <label htmlFor="address">Adresse :</label>
-          <br></br>
           <input
             id="address"
             value={address}
             onChange={handleAddressChange}
+            className="custom-input"
+            placeholder="Adresse"
           />
         </div>
+        <br></br>
         <div>
-          <label htmlFor="zip_code">Code Postal :</label>
-          <br></br>
           <input
             id="zip_code"
             value={zip_code}
             onChange={handleZipCodeChange}
+            className="custom-input"
+            placeholder="Code Postal"
           />
         </div>
+        <br></br>
         <div>
-          <label htmlFor="city">Ville :</label>
-          <br></br>
           <input
             id="city"
             value={city}
             onChange={handleCityChange}
+            className="custom-input"
+            placeholder="Ville"
           />
         </div>
+        <br></br>
         <div>
-          <label htmlFor="borough">Arrondissement :</label>
-          <br></br>
           <select
             id="borough"
             value={borough}
             onChange={handleBoroughChange}
+            className="custom-input"
           >
             <option value="1er">1er</option>
     		    <option value="2e">2e</option>
@@ -198,17 +224,18 @@ export default function CreatePlace() {
             <option value="20e">20e</option>
           </select>
         </div>
+        <br></br>
         <div>
-          <label htmlFor="url">URL :</label>
-          <br></br>
           <input
             id="url"
             value={url}
             onChange={handleUrlChange}
+            className="custom-input"
+            placeholder="URL du site"
           />
         </div>
         <br></br>
-        <button type="submit">Créer l'annonce</button>
+        <button type="submit" className="circle-btn text-circle-btn">Créer l'annonce</button>
       </form>
     </div>
   );

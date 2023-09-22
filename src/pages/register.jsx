@@ -54,6 +54,11 @@ export default function Register() {
 
   return (
     <div className="form_signup container">
+      <div className="return-link d-flex justify-content-start">
+        <Link to="/">
+          <span>Retour</span>
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
         <h1 className="top-title-login">S'inscrire</h1>
           {error && <p>{error}</p>}
@@ -99,11 +104,6 @@ export default function Register() {
         <div className="button-register d-flex justify-content-center">
           <button type="submit">S'inscrire</button>
         </div>
-        <div className="return d-flex justify-content-end">
-        <Link to="/">
-          <span>Retour</span>
-        </Link>
-      </div>
       </form>
     </div>
   );

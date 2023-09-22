@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
+import { isAdminAtom } from '../atom'
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 
 export default function Login() {
   const [, setUser] = useAtom(userAtom);
+  const [isAdmin, setIsAdmin] = useAtom(isAdminAtom);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,11 +35,19 @@ export default function Login() {
       if (response.ok) {
         console.log('Vous êtes connecté');
         const data = await response.json();
+        const is_admin = data.user.is_admin
 
         Cookies.set('token', response.headers.get("Authorization"));
         Cookies.set('id', data.user.id);
 
+
         navigate('/')
+
+        if (is_admin) {
+          setIsAdmin(true);
+      } else {
+          setIsAdmin(false);
+      }
 
         setUser({
           isLoggedIn: true,
@@ -52,6 +62,11 @@ export default function Login() {
 
   return (
     <div className="form_signin container d-flex justify-content-center">
+      <div className="return-link d-flex justify-content-start">
+        <Link to="/">
+          <span>Retour</span>
+        </Link>
+        </div>
       <form onSubmit={handleLogin}>
         <h1 className="top-title-login">Se connecter</h1>
           {error && <p>{error}</p>}
@@ -82,11 +97,6 @@ export default function Login() {
         </div>
         <div className="button-login">
           <button type="submit">Se connecter</button>
-        </div>
-        <div className="return d-flex justify-content-end">
-        <Link to="/">
-          <span>Retour</span>
-        </Link>
         </div>
       </form>
     </div>
