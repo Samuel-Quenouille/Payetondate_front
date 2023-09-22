@@ -129,7 +129,7 @@ a{
     
     .btn-map-2{
       font-weight: 300;
-      margin-left: 110px !important;
+      margin-right: 150px !important;
       margin-top: 20px !important;
       align-items: center !important;
       font-size: 0.8em !important;
@@ -157,7 +157,7 @@ a{
     
     .content{
       width: 60% !important;
-      padding-top: 130px !important;
+      padding-top: 10px !important;
       font-size: 0.8em !important;
     }
   
