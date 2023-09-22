@@ -53,7 +53,6 @@ export default function HistoryOf() {
               <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
             </div>
         </div>
-
         <div className="image-and-content">
             <img src={adada} alt='Bar Adada' style={{width:'20%'}} className='buttes-chaumont-img' />
             <div className="content">
