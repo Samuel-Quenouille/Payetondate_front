@@ -12,7 +12,7 @@ export default function Zodiacpost() {
       <p className='content_post p-5'>Céline a accepté votre rendez-vous. La date et l’heure sont fixées, youpi ! Oui, mais pour aller où ?! Ah, qu’est-ce que vous feriez sans nous ? Comme on est sympas, on vous propose cette semaine, quelques idées de lieux selon le signe astro de votre date.</p>
       <br></br>
       <br></br>
-      <img src={Sagittarius} alt="Sagittarius" className="category-icon" style={{ width: '8%', position: 'absolute', marginLeft: '50px', marginTop: '-20px' }} />
+      <img src={Sagittarius} alt="Sagittarius" className="zodiac-icon" style={{ width: '8%', position: 'absolute', marginLeft: '50px', marginTop: '-20px' }} />
       <h3 className='subtitle_post px-5'>Votre date est Sagittaire ?</h3>
       <p className='content_post px-5'>Le Sagittaire est chaleureux et joyeux. Toutefois, il peut vite se montrer impatient. Il faut donc un date qui pulse ! Montrez-lui en de toutes les couleurs en l'emmenant vous envoyer en l'air dans un simulateur de chute libre avec Ifly (catégorie "Insolite"). Enfin, pour pimenter ce date, vous pouvez aller manger au Kodawari Ramen (date "On sort le grand jeu").
       </p>
@@ -36,7 +36,7 @@ export default function Zodiacpost() {
     <br></br>
     <br></br>
     <h3 className='subtitle_post px-5'>Votre date est Poissons ?</h3>
-      <p className='content_post px-5'>Le Poissons est LE grand romantique du zodiaque. Rêveur, fleur bleue et créatif, une multitude d'activité devraient ravir votre date Poissons : vous pouvez lui proposer de la peinture dans le noir au Paint Me up (date "Insolite") et enchaîner avec un dîner à la brasserie Bellanger (date "On sort le grand jeu) pour le faire rêver dans un cadre romantique.
+      <p className='content_post px-5'>Le Poissons est LE grand romantique du zodiaque. Rêveur, fleur bleue et créatif, une multitude d'activité devraient ravir votre date Poissons : vous pouvez lui proposer de la peinture dans le noir au Paint Me up (date "Insolite") et enchaîner avec un dîner à la Grande Cascade (date "On sort le grand jeu) pour le faire rêver dans un cadre romantique.
       </p>
       <p className='content_post px-5'><strong>TIPS : </strong>parlez lui de vos tracas quotidien, il se fera un plaisir de vous écouter et vous réconforter (n'hésitez pas à aller voir notre rubrique "spot à bisou(s)" pour un baiser féérique après l'avoir fait craquer ;) ). 
       </p>
