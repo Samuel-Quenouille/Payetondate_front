@@ -540,12 +540,6 @@ button:focus-visible {
 
 /************* Tell us *****************/
 
-.text-tellus {
-  color: white !important;
-  font-family: inherit;
-  font-size: 0.9em;
-}
-
 .small-interline {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -580,21 +574,28 @@ button:focus-visible {
   font-family: inherit;
 }
 
-.input-tellus {
-  width: 600px !important; 
+.input-tellus-description {
+  width: 600px !important;
+  border-radius: 8px;
   background-color: transparent !important;
   border: 1px solid white !important;
   color: white !important;
+  padding: 10px;
 }
 
 .input-tellus-first_name {
   width: 383px !important; 
   background-color: transparent !important;
+  border-radius: 8px;
+  padding: 5px;
   border: 1px solid white !important;
   color: white !important;
 }
 
 .input-tellus-age {
+  width: 200px !important;
+  padding: 5px; 
+  border-radius: 8px;
   background-color: transparent !important;
   border: 1px solid white !important;
   color: white !important;

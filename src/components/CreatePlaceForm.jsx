@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
-import { Link } from 'react-router-dom';
 
 export default function CreatePlace() {
   const [title, setTitle] = useState('');
@@ -72,7 +71,7 @@ export default function CreatePlace() {
         price: price,
         url: url,
         image: image,
-        user_id: user.id,
+        user_id: user.id
       }
     };
 
@@ -112,17 +111,17 @@ export default function CreatePlace() {
 
   return (
     <div className="create_place container">
-      {showAlert && (
-        <div className="alert alert-success" role="alert">
-          Ton lieu a été envoyé à l'administrateur dans l'attente d'une validation
-        </div>
-      )}
       <h1 className="title-placeform">Ajouter un lieu</h1>
       <div className="subtitle-placeform container">
         <p>Pour proposer un lieu, ça se passe ici !</p>
         <p>Un grand merci à vous qui faite exister la communauté Paye ton date.</p>
       </div>
       <form className="form-place-container" onSubmit={handleSubmit}>
+      {showAlert && (
+        <div className="alert alert-success" role="alert">
+          Ton lieu a été envoyé à l'administrateur dans l'attente d'une validation
+        </div>
+      )}
       <br></br>
         <div style={{display: 'flex', justifyContent: 'center'}}> 
           <input
