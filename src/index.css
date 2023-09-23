@@ -791,6 +791,32 @@ a{
   justify-content: center;
 }
 
+/************* Posts page *****************/
+
+.title_postspage {
+  margin-top: -5%;
+  position: relative;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle_postspage {
+  font-family: inherit;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  color:#ffffff
+}
+
+.btn-readpost {
+  color: #232323 !important;
+  text-decoration: none !important;
+  justify-content: right;
+}
+
+
 /************* Zodiac post *****************/
 
 .zodiac-icon{
