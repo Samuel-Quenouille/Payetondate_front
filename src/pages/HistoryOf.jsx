@@ -41,7 +41,7 @@ export default function HistoryOf() {
       <div className="container">
         <img src={tonnerre} alt="Cloud Icon" className="category-icon" style={{ width: '7%', position: 'absolute', marginLeft: '510px', marginTop: '-15px' }} />
         <h1 className="title_categoriespage" style={{position: 'relative'}}>Histoire de</h1>
-        <h6 className='subtitle_categoriespage' style={{position: 'relative'}}>avant de conclure</h6>
+        <h6 className="subtitle_categoriespage" style={{position: 'relative'}}>avant de conclure</h6>
         <div className="d-flex justify-content-start">
                 <Link to="/">
                     <span className='return-link'>Retour</span>
