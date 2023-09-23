@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
-import { useAtom } from 'jotai';
-import { userAtom } from '../atom';
 import '../index.css';
 
 export default function CreateTestimony() {
   const [first_name, setFirstName] = useState('');
   const [age, setAge] = useState('');
   const [description, setDescription] = useState('');
-  const [user] = useAtom(userAtom);
   const [showAlert, setShowAlert] = useState(false);
-
-  const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
-  }
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -20,6 +13,10 @@ export default function CreateTestimony() {
 
   const handleAgeChange = (event) => {
     setAge(event.target.value);
+  }
+
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
   }
 
   const handleSubmit = async (event) => {
@@ -61,36 +58,45 @@ export default function CreateTestimony() {
 
   return (
     <>
-      <h3 className='top-title'>Racontez-nous</h3>
-      <br></br>
-      <p className="text-tellus small-interline">Ici, partagez nous votre témoignage.</p> 
-      <p className="text-tellus small-interline">Dites-nous où était votre date et comment ça s’est passé.</p>
-      <p className="text-tellus small-interline">Votre message pourrait être partagé dans la rubrique “Vos lettres d’amour” !</p>
-      <p className="text-tellus small-interline">N’oubliez de nous préciser votre prénom et votre âge.</p>
-      <br></br>
-      <br></br>
+      <h3 className='top-title'>Racontes-nous</h3>
 
       {showAlert && (
         <div className="alert alert-success" role="alert">
-          Votre témoignage a été créé avec succès
+          Ton témoignage a été envoyé à l'administrateur dans l'attente d'une validation
         </div>
       )}
       <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
-        <div className="row g-3 text-tellus">
+        <div className="row g-3">
           <div className="col">
-            <label htmlFor="first_name" className="form-label">Ton prénom</label>
-            <input value={first_name} onChange={handleFirstNameChange} type="text" className="form-control input-tellus-first_name" id="first_name" placeholder="First_name"/>
+            <input
+              id="first_name" 
+              value={first_name} 
+              onChange={handleFirstNameChange} 
+              className="input-tellus-first_name" 
+              placeholder="Ton prénom"
+            />
           </div>
           <div className="col">
-            <label htmlFor="age" className="form-label">Ton âge</label>
-            <input value={age} onChange={handleAgeChange} type="integer" className="form-control input-tellus-age" id="age" placeholder="Age"/>
+            <input 
+              id="age"
+              value={age} 
+              onChange={handleAgeChange} 
+              type="integer" 
+              className="input-tellus-age" 
+              placeholder="Ton âge"
+            />
           </div>
         </div>
         <br></br>
-
-        <div className="mb-3 text-tellus">
-          <label htmlFor="description" className="form-label">Ton message</label>
-          <textarea value={description} onChange={handleDescriptionChange} type="message" className="form-control input-tellus" id="description" rows="6" placeholder="Dites-nous tout ici !"/>
+        <div className="mb-3">
+          <textarea 
+            id="description"
+            value={description} 
+            onChange={handleDescriptionChange} 
+            className="input-tellus-description" 
+            rows="6" 
+            placeholder="Ici, partages-nous ton témoignage. Dis-nous comment s'est déroulé ton date et où s'est-il passé. Ton message pourrait apparaître dans la rubrique Vos lettres d'amour !"
+          />
         </div>
         <br></br>
         <button type="submit" className="circle-btn text-circle-btn">Envoyer</button>
