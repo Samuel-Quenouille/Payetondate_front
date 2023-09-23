@@ -1,22 +1,44 @@
 import React, { useState } from 'react';
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
+import { Link } from 'react-router-dom';
 
 export default function CreatePlace() {
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [price, setPrice] = useState('');
-  const [category, setCategory] = useState('');
   const [address, setAddress] = useState('');
   const [zip_code, setZipCode] = useState('');
   const [city, setCity] = useState('');
   const [borough, setBorough] = useState('');
+  const [category, setCategory] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
   const [url, setUrl] = useState('');
+  const [image, setImage] = useState('');
   const [user] = useAtom(userAtom);
   const [showAlert, setShowAlert] = useState(false);
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
+  };
+
+  const handleAddressChange = (event) => {
+    setAddress(event.target.value);
+  };
+
+  const handleZipCodeChange = (event) => {
+    setZipCode(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleBoroughChange = (event) => {
+    setBorough(event.target.value);
+  }
+
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
   };
 
   const handleDescriptionChange = (event) => {
@@ -27,30 +49,12 @@ export default function CreatePlace() {
     setPrice(event.target.value);
   };
 
-  const handleCategoryChange = (event) => {
-    setCategory(event.target.value);
-  };
-
-  const handleAddressChange = (event) => {
-    setAddress(event.target.value);
-    
-  }
-
-  const handleZipCodeChange = (event) => {
-    setZipCode(event.target.value);
-    
-  }
-
-  const handleCityChange = (event) => {
-    setCity(event.target.value);
-  }
-
-  const handleBoroughChange = (event) => {
-    setBorough(event.target.value);
-  }
-
   const handleUrlChange = (event) => {
     setUrl(event.target.value);
+  }
+
+  const handleImageChange = (event) => {
+    setImage(event.target.value);
   }
 
   const handleSubmit = async (event) => {
@@ -59,14 +63,15 @@ export default function CreatePlace() {
     const newPlace = {
       place: {
         title: title,
-        description: description,
-        price: price,
-        category: category,
         address: address,
         zip_code: zip_code,
         city: city,
         borough: borough,
+        category: category,
+        description: description,
+        price: price,
         url: url,
+        image: image,
         user_id: user.id,
       }
     };
@@ -82,7 +87,7 @@ export default function CreatePlace() {
       });
 
       if (response.ok) {
-        console.log('Votre annonce a été créée avec succès');
+        console.log('Votre lieu a été ajouté avec succès');
         setShowAlert(true);
         setTitle('');
         setDescription('');
@@ -93,6 +98,7 @@ export default function CreatePlace() {
         setCity('');
         setBorough('');
         setUrl('');
+        setImage('');
         setTimeout(() => {
           setShowAlert(false);
         }, 3000);
@@ -108,100 +114,67 @@ export default function CreatePlace() {
     <div className="create_place container">
       {showAlert && (
         <div className="alert alert-success" role="alert">
-          Votre témoignage a été créé avec succès
+          Ton lieu a été envoyé à l'administrateur dans l'attente d'une validation
         </div>
       )}
-      <h1 className="title-placeform">Création d'un lieu</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="title-placeform">Ajouter un lieu</h1>
+      <div className="subtitle-placeform container">
+        <p>Pour proposer un lieu, ça se passe ici !</p>
+        <p>Un grand merci à vous qui faite exister la communauté Paye ton date.</p>
+      </div>
+      <form className="form-place-container" onSubmit={handleSubmit}>
       <br></br>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}> 
           <input
             id="title"
             value={title}
             onChange={handleTitleChange}
-            className="custom-input"
+            className="custom-input-placeform"
             placeholder="Nom du lieu"
           />
         </div>
         <br></br>
-        <div>
-          <textarea
-            id="description"
-            value={description}
-            onChange={handleDescriptionChange}
-            className="custom-input"
-            placeholder="Description"
-          />
-        </div>
-        <div>
-          <label htmlFor="price">Prix :</label>
-          <br></br>
-          <select
-            id="price"
-            value={price}
-            onChange={handlePriceChange}
-            className="custom-input"
-          >
-            <option value="Gratuit">Gratuit</option>
-    		    <option value="0 - 15 €">0 - 15 €</option>
-            <option value="15 - 30 €">15 - 30 €</option>
-            <option value="A partir de 30 €">A partir de 30 €</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="category">Catégorie :</label>
-          <br></br>
-          <select
-            id="category"
-            value={category}
-            onChange={handleCategoryChange}
-            className="custom-input"
-          >
-            <option value="Histoire de">Histoire de</option>
-    		    <option value="Spots à bisou(s)">Spots à bisou(s)</option>
-    		    <option value="On sort le grand jeu">On sort le grand jeu</option>
-    		    <option value="Insolite">Insolite</option>
-            <option value="Gratuit">Gratuit</option>
-          </select>
-        </div>
-        <br></br>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <input
             id="address"
             value={address}
             onChange={handleAddressChange}
-            className="custom-input"
+            className="custom-input-placeform"
             placeholder="Adresse"
           />
         </div>
         <br></br>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <input
             id="zip_code"
             value={zip_code}
             onChange={handleZipCodeChange}
-            className="custom-input"
+            className="custom-input-placeform"
             placeholder="Code Postal"
           />
         </div>
         <br></br>
-        <div>
-          <input
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <select
             id="city"
             value={city}
             onChange={handleCityChange}
-            className="custom-input"
+            className="custom-input-placeform"
             placeholder="Ville"
-          />
+          >
+            <option value="" disabled>Sélectionner la ville</option>
+            <option value="Paris">Paris</option>
+          </select>
         </div>
         <br></br>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <select
             id="borough"
             value={borough}
             onChange={handleBoroughChange}
-            className="custom-input"
+            className="custom-input-placeform"
           >
+            <option value="" disabled>Sélectionner l'arrondissement</option>
             <option value="1er">1er</option>
     		    <option value="2e">2e</option>
             <option value="3e">3e</option>
@@ -225,17 +198,70 @@ export default function CreatePlace() {
           </select>
         </div>
         <br></br>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <select
+            id="category"
+            value={category}
+            onChange={handleCategoryChange}
+            className="custom-input-placeform"
+          >
+            <option value="" disabled>Sélectionner la catégorie</option>
+            <option value="Histoire de">Histoire de</option>
+    		    <option value="Spots à bisou(s)">Spots à bisou(s)</option>
+    		    <option value="On sort le grand jeu">On sort le grand jeu</option>
+    		    <option value="Insolite">Insolite</option>
+            <option value="Gratuit">Gratuit</option>
+          </select>
+        </div>
+        <br></br>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <textarea
+            id="description"
+            value={description}
+            onChange={handleDescriptionChange}
+            className="custom-input-placeform"
+            placeholder="Description"
+          />
+        </div>
+        <br></br>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <select
+            id="price"
+            value={price}
+            onChange={handlePriceChange}
+            className="custom-input-placeform"
+          >
+            <option value="" disabled>Sélectionner le prix</option>
+            <option value="Gratuit">Gratuit</option>
+    		    <option value="0 - 15 €">0 - 15 €</option>
+            <option value="15 - 30 €">15 - 30 €</option>
+            <option value="A partir de 30 €">A partir de 30 €</option>
+          </select>
+        </div>
+        <br></br>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <input
             id="url"
             value={url}
             onChange={handleUrlChange}
-            className="custom-input"
+            className="custom-input-placeform"
             placeholder="URL du site"
           />
         </div>
         <br></br>
-        <button type="submit" className="circle-btn text-circle-btn">Créer l'annonce</button>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <input
+            id="image"
+            value={image}
+            onChange={handleImageChange}
+            className="custom-input-placeform"
+            placeholder="URL de l'image"
+          />
+        </div>
+        <br></br>
+        <div className="btn-placeform">
+          <button type="submit" className="circle-btn text-circle-btn">Envoyer</button>
+        </div>
       </form>
     </div>
   );

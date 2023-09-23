@@ -14,7 +14,7 @@
   font-size: 0.6rem;
 }
 
-a{
+a {
   color: white !important;
 }
 
@@ -755,6 +755,39 @@ a{
   font-size: 60px; /* Ajustez la taille de la police du titre */
   color: #ffffff;
   text-align: center;
+}
+
+.subtitle-placeform {
+  margin-top: 20px;
+  font-family: inherit;
+  text-align: center;
+  font-size: 18px;
+  color:#ffffff
+}
+
+.form-place-container {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 20px;
+  margin: 80px;
+}
+
+.custom-input-placeform {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  width: 50%;
+  color: white;
+}
+
+.btn-placeform {
+  display: flex;
+  justify-content: center;
 }
 
 /************* Zodiac post *****************/
