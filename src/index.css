@@ -843,3 +843,33 @@ a{
   position: relative;
   color:#ffffff;
 }
+
+.leaflet-container {
+  margin-bottom: 30px;
+  height: 400px;
+  width: 800px;
+}
+
+/* Styles CSS pour la carte modale */
+.map-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Styles CSS pour le bouton de fermeture */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}

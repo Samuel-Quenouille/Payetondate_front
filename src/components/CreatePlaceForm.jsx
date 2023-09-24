@@ -247,6 +247,7 @@ export default function CreatePlace() {
             placeholder="URL de l'image"
           />
         </div>
+        <br></br>
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <input
             id="url"

@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../components/Map/Map';
 import buttes_chaumont from '../assets/img/buttes_ chaumont.jpg';
 import beaubourg from '../assets/img/beaubourg.jpg'
 import cloudIcon from '../assets/img/cloud.png';
 
 export default function Kiss() {
     const [places, setPlaces] = useState([]);
+    const [showMap, setShowMap] = useState(false);
+
+    const openMap = () => {
+        setShowMap(true);
+    };
+      
+      const closeMap = () => {
+        setShowMap(false);
+    };
+      
 
     useEffect(() => {
         const fetchData = async () => {
@@ -66,7 +77,7 @@ export default function Kiss() {
 
             {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
-                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='spot-img' />
+                <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
                     <h3>{place.title}</h3>
                     <br></br>
@@ -74,7 +85,15 @@ export default function Kiss() {
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
-                    <button type="submit" className="circle-btn btn-map-2">Voir sur la map</button>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    {showMap && (
+                        <div className="map-modal">
+                            <button onClick={closeMap} className="close-button">
+                                Fermer
+                            </button>
+                            <Map city={place.address} />
+                        </div>
+                    )}
                 </div>
             </div>
             ))}

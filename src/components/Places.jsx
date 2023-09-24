@@ -112,8 +112,15 @@ export default function Places() {
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="email" className="custom-input-placeform" id="user_id" value={place.user_id} readOnly />
                 </div>
-                  <button type="submit" className="btn btn-primary" onClick={() => handleValidatePlace(place.id)}>Valider</button>
-                  <button type="submit" className="btn btn-danger" onClick={() => handleDeletePlace(place.id)}>Supprimer</button>
+                <div className="mb-3 text-center">
+                  <button type="submit" className="btn btn-primary" onClick={() => handleValidatePlace(place.id)}>
+                    Valider
+                  </button>
+                  {''}
+                  <button type="submit" className="btn btn-danger" onClick={() => handleDeletePlace(place.id)}>
+                    Supprimer
+                  </button>
+                </div>
               </form>
             </div>
           )
