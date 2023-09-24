@@ -10,8 +10,8 @@ export default function Zodiacpost() {
     <div>
       <h1 className='title_post'>Où emmener son date selon son signe astro ?</h1>
       <p className='content_post p-5'>Céline a accepté votre rendez-vous. La date et l’heure sont fixées, youpi ! Oui, mais pour aller où ?! Ah, qu’est-ce que vous feriez sans nous ? Comme on est sympas, on vous propose cette semaine, quelques idées de lieux selon le signe astro de votre date.</p>
-      <br></br>
-      <br></br>
+    <br></br>
+    <br></br>
       <h3 className='subtitle_post px-5'>Votre date est Bélier ?</h3>
       <p className='content_post px-5'>Ambitieux et courageux, le Bélier n’a pas le time et surtout il aime l’action ! Pour un date ultra vitaminé, commencer par une session dans l’une des nombreuses salles d’escalade Arkose disponibles dans la ville (date « Insolite ») ou si la météo est avec vous, rendez-vous au Parc de Vincennes pour une séance d’accrobranche (date « Insolite »). Prolongez ce moment intense avec une (ou plusieurs) pause(s) cocktails au Cocktails POP (date « Histoire de »).
       </p>
@@ -65,6 +65,8 @@ export default function Zodiacpost() {
       <p className='content_post px-5'>Enigmatique et franc, le Scorpion sait s’affirmer et obtenir ce qu’il désire. Pourquoi directement attaquer avec un dîner à l’Alcazar (date « On sort le grand jeu ») et continuer cette soirée avec une promenade le long des quais de Seine (date « gratuit c’est encore mieux »).
       </p>
       <p className='content_post px-5'><strong>TIPS : </strong>dites-lui une vérité, mais pas salé au risque de se faire piquer. Dire le temps qu’il fait dehors est une très bonne idée.</p>
+    <br></br>
+    <br></br>
     <br></br>
       <img src={Sagittarius} alt="Sagittarius" className="zodiac-icon" style={{ width: '8%', position: 'absolute', marginRight: '-50px', marginTop: '-130px' }} />
       <h3 className='subtitle_post px-5'>Votre date est Sagittaire ?</h3>
