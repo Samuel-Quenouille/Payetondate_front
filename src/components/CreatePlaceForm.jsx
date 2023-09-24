@@ -240,21 +240,20 @@ export default function CreatePlace() {
         <br></br>
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <input
-            id="url"
-            value={url}
-            onChange={handleUrlChange}
-            className="custom-input-placeform"
-            placeholder="URL du site"
-          />
-        </div>
-        <br></br>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-          <input
             id="image"
             value={image}
             onChange={handleImageChange}
             className="custom-input-placeform"
             placeholder="URL de l'image"
+          />
+        </div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <input
+            id="url"
+            value={url}
+            onChange={handleUrlChange}
+            className="custom-input-placeform"
+            placeholder="URL du site"
           />
         </div>
         <br></br>
