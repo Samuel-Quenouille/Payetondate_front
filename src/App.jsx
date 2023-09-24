@@ -16,7 +16,7 @@ import Unusual from './pages/unusual';
 import BigGame from './pages/BigGame';
 import Kiss from './pages/kiss';
 import HistoryOf from './pages/HistoryOf';
-import Zodiacpost from './pages/zodiacpost';
+import ZodiacPosts from './pages/ZodiacPosts';
 import Articles from './pages/articles';
 
 export default function App() {
@@ -51,7 +51,7 @@ export default function App() {
         <Route path="/biggame" element={<BigGame />} />
         <Route path="/kiss" element={<Kiss />} />
         <Route path="/historyof" element={<HistoryOf />} />
-        <Route path="/zodiacpost" element={<Zodiacpost />} />
+        <Route path="/zodiacposts" element={<ZodiacPosts />} />
         <Route path="/articles" element={<Articles />} />
       </Routes>
     </BrowserRouter>

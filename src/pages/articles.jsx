@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
-import './zodiacpost'
+import './ZodiacPosts'
 
 export default function Categories() {
   
@@ -16,8 +16,8 @@ export default function Categories() {
                   <div className="card-body custom-body-1">
                       <h5 className="card-title">Où emmener son date selon son signe astro ?</h5>
                       <p className="card-text">Céline a accepté votre rendez-vous. La date et l’heure sont fixées, youpi ! Oui, mais pour aller où ?! Ah, qu’est-ce que vous feriez sans nous ? Comme on est sympas, on vous propose cette semaine, quelques idées de lieux selon le signe astro de votre date.</p>
-                      <Link to="/zodiacpost">
-                      <span className='btn-readpost'><strong>Lire l'article</strong></span>
+                      <Link to="/ZodiacPosts">
+                        <span className='btn-readpost'><strong>Lire l'article</strong></span>
                       </Link>
                   </div>
                   </div>

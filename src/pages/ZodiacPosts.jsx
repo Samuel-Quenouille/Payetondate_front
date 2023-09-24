@@ -5,7 +5,7 @@ import Capricorn from '../assets/img/capricorn.png'
 import Aquarius from '../assets/img/aquarius.png'
 import Pisces from '../assets/img/pisces.png'
 
-export default function Zodiacpost() {
+export default function ZodiacPosts() {
   return (
     <div>
       <h1 className='title_post'>Où emmener son date selon son signe astro ?</h1>
