@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../components/Map/Map';
 import coeur from '../assets/img/coeur.png'
 import restaurant_theleme from '../assets/img/theleme.jpg';
 import restaurant_terra from '../assets/img/terra.jpg'
 
 export default function BigGame() {
     const [places, setPlaces] = useState([]);
+    const [showMap, setShowMap] = useState(false);
+
+    const openMap = () => {
+        setShowMap(true);
+    };
+      
+    const closeMap = () => {
+        setShowMap(false);
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -66,13 +76,28 @@ export default function BigGame() {
                     <button type="submit" className="circle-btn btn-map-3">Voir sur la map</button>
                 </div>
             </div>
-            {places.map((place) => (
-              <li key={place.id}>
-                <h3>{place.title}</h3>
-                <p className="text-big_game">Description : {place.description}</p>
-                <p className="text-big_game">Adresse : {place.address}, {place.city} {place.borough}</p>
-                <p className="text-big_game">Prix : {place.price}</p>
-              </li>
+
+            {places.map((place) => (  
+            <div className="image-and-content" key={place.id}>
+                <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
+                <div className="content">
+                    <h3>{place.title}</h3>
+                    <br></br>
+                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p className='spot-description'>{place.description}</p>
+                    <p>Fourchette de prix: {place.price}</p>
+                    <br></br>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    {showMap && (
+                        <div className="map-modal">
+                            <button onClick={closeMap} className="close-button">
+                                Fermer
+                            </button>
+                            <Map city={place.address} />
+                        </div>
+                    )}
+                </div>
+            </div>
             ))}
         </div>
     );

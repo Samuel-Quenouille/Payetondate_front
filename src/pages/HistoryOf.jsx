@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../components/Map/Map';
 import '../index.css';
 import tonnerre from '../assets/img/tonnerre.png';
 import player_one from '../assets/img/player_one.jpg';
@@ -7,6 +8,15 @@ import adada from '../assets/img/adada.jpg';
 
 export default function HistoryOf() {
   const [places, setPlaces] = useState([]);
+  const [showMap, setShowMap] = useState(false);
+
+  const openMap = () => {
+    setShowMap(true);
+  };
+  
+  const closeMap = () => {
+    setShowMap(false);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -68,15 +78,23 @@ export default function HistoryOf() {
 
         {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
-                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='spot-img' />
+              <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                  <h3>{place.title}</h3>
-                  <br></br>
-                  <p alt='Photo cabine' style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
-                  <p className='spot-description'>{place.description}</p>
-                  <p>Fourchette de prix: {place.price}</p>
-                  <br></br>
-                  <button type="submit" className="circle-btn btn-map">Voir sur la map</button>
+                    <h3>{place.title}</h3>
+                    <br></br>
+                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p className='spot-description'>{place.description}</p>
+                    <p>Fourchette de prix: {place.price}</p>
+                    <br></br>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    {showMap && (
+                      <div className="map-modal">
+                          <button onClick={closeMap} className="close-button">
+                            Fermer
+                          </button>
+                          <Map city={place.address} />
+                      </div>
+                    )}
                 </div>
             </div>
         ))}

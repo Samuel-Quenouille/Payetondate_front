@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../components/Map/Map';
 
 export default function Free() {
     const [places, setPlaces] = useState([]);
+    const [showMap, setShowMap] = useState(false);
+
+    const openMap = () => {
+        setShowMap(true);
+    };
+      
+    const closeMap = () => {
+        setShowMap(false);
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,20 +44,31 @@ export default function Free() {
 
     return (
         <div className="container">
-          <h1 className="free-title">Gratuit</h1>
-            {places.map((place) => (
-              <li key={place.id}>
-                <h3>{place.title}</h3>
-                <p className="text-free">Description : {place.description}</p>
-                <p className="text-free">Adresse : {place.address}, {place.city} {place.borough}</p>
-                <p className="text-free">Prix : {place.price}</p>
-              </li>
-            ))}
-            <div className="return d-flex justify-content-end">
-                <Link to="/">
-                    <span>Retour</span>
-                </Link>
+            <Link to="/">
+                <span className='return-link'>Retour</span>
+            </Link>
+        {places.map((place) => (  
+            <div className="image-and-content" key={place.id}>
+                <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
+                <div className="content">
+                    <h3>{place.title}</h3>
+                    <br></br>
+                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p className='spot-description'>{place.description}</p>
+                    <p>Fourchette de prix: {place.price}</p>
+                    <br></br>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    {showMap && (
+                        <div className="map-modal">
+                            <button onClick={closeMap} className="close-button">
+                                Fermer
+                            </button>
+                            <Map city={place.address} />
+                        </div>
+                    )}
+                </div>
             </div>
+        ))}
         </div>
     );
 }

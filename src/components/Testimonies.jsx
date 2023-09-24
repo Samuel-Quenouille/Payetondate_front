@@ -77,7 +77,7 @@ export default function Testimonies() {
     };
 
     return (
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="d-flex flex-wrap justify-content-center">
         {testimonies.map((testimony) => (
           !testimony.is_validate && (
           <div key={testimony.id} className="col">
@@ -94,8 +94,15 @@ export default function Testimonies() {
                 <div className="mb-3">
                   <textarea className="input-tellus-description" id="description" rows="6" value={testimony.description} readOnly />
                 </div>
-                  <button type="submit" className="btn btn-primary" onClick={() => handleValidateTestimony(testimony.id)}>Valider</button>
-                  <button type="submit" className="btn btn-danger" onClick={() => handleDeleteTestimony(testimony.id)}>Supprimer</button>
+                <div className="mb-3 text-center">
+                  <button type="submit" className="btn btn-primary" onClick={() => handleValidateTestimony(testimony.id)}>
+                    Valider
+                  </button>
+                  {' '}
+                  <button type="submit" className="btn btn-danger" onClick={() => handleDeleteTestimony(testimony.id)}>
+                    Supprimer
+                  </button>
+                </div>
               </form>
           </div>
           )
