@@ -77,38 +77,47 @@ export default function Places() {
     };
 
     return (
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {places.map((place) => (
-            !place.is_validate && (
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {places.map((place) => (
+          !place.is_validate && (
             <div key={place.id} className="col">
-              <div className="card">
-                <form>
-                  <div className="mb-3">
-                    <input type="text" className="form-control" id="category" value={place.category} readOnly />
-                  </div>
-                  <div className="mb-3">
-                    <input type="text" className="form-control" id="title" value={place.title} readOnly />
-                  </div>
-                  <div className="mb-3">
-                    <textarea className="form-control" id="description" value={place.description} readOnly />
-                  </div>
-                  <div className="mb-3">
-                    <input type="text" className="form-control" id="price" value={place.price} readOnly />
-                  </div>
-                  <div className="mb-3">
-                    <input type="text" className="form-control" id="address" value={place.address} readOnly />
-                  </div>
-                  <div className="mb-3">
-                    <input type="email" className="form-control" id="creator_email" value={place.user_id} readOnly />
-                  </div>
-                    <button type="submit" className="btn btn-primary" onClick={() => handleValidatePlace(place.id)}>Valider</button>
-                    <button type="submit" className="btn btn-primary">Modifier</button>
-                    <button type="submit" className="btn btn-danger" onClick={() => handleDeletePlace(place.id)}>Supprimer</button>
-                </form>
-              </div>
+              <form className="form-place-container">
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="title" value={place.title} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="address" value={place.address} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <textarea className="custom-input-placeform" id="zip_code" value={place.zip_code} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="city" value={place.city} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="category" value={place.category} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="description" value={place.description} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="price" value={place.price} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="image" value={place.image} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="url" value={place.url} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="email" className="custom-input-placeform" id="user_id" value={place.user_id} readOnly />
+                </div>
+                  <button type="submit" className="btn btn-primary" onClick={() => handleValidatePlace(place.id)}>Valider</button>
+                  <button type="submit" className="btn btn-danger" onClick={() => handleDeletePlace(place.id)}>Supprimer</button>
+              </form>
             </div>
-            )
-          ))}
-        </div>
+          )
+        ))}
+      </div>
     )
 }

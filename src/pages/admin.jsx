@@ -8,7 +8,9 @@ import Testimonies from "../components/Testimonies";
 
 export default function Admin() {
 
-    return (
+  return (
+    <>
+      <h1 className="title_categoriespage" style={{position: 'relative'}}>Admin</h1>
       <div>
         <div>
           <Places />
@@ -17,5 +19,6 @@ export default function Admin() {
           <Testimonies />
         </div>
       </div>
-    );
+    </>
+  );
 }
