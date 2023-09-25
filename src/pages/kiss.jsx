@@ -89,7 +89,7 @@ export default function Kiss() {
                             <button onClick={closeMap} className="close-button">
                                 Fermer
                             </button>
-                            <Map city={place.address} />
+                            <Map address={place.address} zip_code={place.zip_code} city={place.city} />
                         </div>
                     )}
                 </div>
