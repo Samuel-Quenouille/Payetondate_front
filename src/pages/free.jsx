@@ -45,7 +45,7 @@ export default function Free() {
 
     return (
         <div className="container">
-            <img src={star} alt="Star Icon" className="category-icon" style={{ width: '6%', position: 'absolute', marginLeft: '300px', marginTop: '-15px' }} />
+            <img src={star} alt="Star Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '390px', marginTop: '-15px' }} />
             <h1 className="title_categoriespage" style={{position: 'relative'}}>Gratuit c'est encore mieux</h1>
             <div className="d-flex justify-content-start">
                 <Link to="/">

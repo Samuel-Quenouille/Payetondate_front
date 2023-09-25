@@ -35,7 +35,6 @@ export default function LoveLetters() {
   return (
     <>
     <h3 className='top-title'>Vos lettres d'amour</h3>
-
     <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
             <div className="card h-100">
