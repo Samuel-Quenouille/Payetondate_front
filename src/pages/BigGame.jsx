@@ -47,8 +47,8 @@ export default function BigGame() {
 
     return (
         <div className="container">
-          <img src={coeur} alt="Heart Icon" className="heart-icon" style={{ width: '3%', position: 'absolute', marginLeft: '480px', marginTop: '1px' }} />
-            <h1 className="kiss-title" style={{position: 'relative'}}>On sort le grand jeu</h1>
+          <img src={coeur} alt="Heart Icon" className="category-icon" style={{ width: '4%', position: 'absolute', marginLeft: '430px', marginTop: '15px' }} />
+            <h1 className="title_categoriespage" style={{position: 'relative'}}>On sort le grand jeu</h1>
           <div className="d-flex justify-content-start">
                 <Link to="/">
                     <span className='return-link'>Retour</span>
@@ -68,7 +68,7 @@ export default function BigGame() {
             <div className="image-and-content">
                 <img src={restaurant_terra} alt='Terra' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>Terra</b>, 21 rue des Gravilliers, Paris, 75003</p>
+                    <p className='spot-title' style={{color:'white'}}><b>Terra</b>, 21 rue des Gravilliers, 75003 Paris</p>
                     <p className='spot-description'> Ce restaurant marie l'art et la gastronomie, proposant parfois des représentations théâtrales avant le dîner. 
                     Le chef japonais Yoshitaka Takayanagi offre une cuisine fine et subtile avec des produits de qualité. 
                     Une expérience idéale pour sortir le grand jeu lors d'un rendez-vous amoureux à Paris.</p>
@@ -81,9 +81,7 @@ export default function BigGame() {
             <div className="image-and-content" key={place.id}>
                 <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <h3>{place.title}</h3>
-                    <br></br>
-                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>

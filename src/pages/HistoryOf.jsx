@@ -80,9 +80,7 @@ export default function HistoryOf() {
             <div className="image-and-content" key={place.id}>
               <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <h3>{place.title}</h3>
-                    <br></br>
-                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>

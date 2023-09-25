@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import star from '../assets/img/star.png';
 import Map from '../components/Map/Map';
 
 export default function Free() {
@@ -44,9 +45,13 @@ export default function Free() {
 
     return (
         <div className="container">
-            <Link to="/">
-                <span className='return-link'>Retour</span>
-            </Link>
+            <img src={star} alt="Star Icon" className="category-icon" style={{ width: '6%', position: 'absolute', marginLeft: '300px', marginTop: '-15px' }} />
+            <h1 className="title_categoriespage" style={{position: 'relative'}}>Gratuit c'est encore mieux</h1>
+            <div className="d-flex justify-content-start">
+                <Link to="/">
+                    <span className='return-link'>Retour</span>
+                </Link>
+            </div>
         {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
                 <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
