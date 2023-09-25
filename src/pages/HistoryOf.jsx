@@ -84,13 +84,13 @@ export default function HistoryOf() {
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
-                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map">Voir sur la map</button>
                     {showMap && (
                       <div className="map-modal">
                           <button onClick={closeMap} className="close-button">
                             Fermer
                           </button>
-                          <Map city={place.address} />
+                          <Map address={place.address} zip_code={place.zip_code} city={place.city} />
                       </div>
                     )}
                 </div>

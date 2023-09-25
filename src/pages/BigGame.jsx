@@ -81,17 +81,17 @@ export default function BigGame() {
             <div className="image-and-content" key={place.id}>
                 <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address} {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
-                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map-3">Voir sur la map</button>
                     {showMap && (
                         <div className="map-modal">
                             <button onClick={closeMap} className="close-button">
                                 Fermer
                             </button>
-                            <Map city={place.address} />
+                            <Map address={place.address} zip_code={place.zip_code} city={place.city} />
                         </div>
                     )}
                 </div>

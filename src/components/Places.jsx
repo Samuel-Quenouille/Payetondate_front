@@ -89,7 +89,7 @@ export default function Places() {
                   <input type="text" className="custom-input-placeform" id="address" value={place.address} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
-                  <textarea className="custom-input-placeform" id="zip_code" value={place.zip_code} readOnly />
+                  <input className="custom-input-placeform" id="zip_code" value={place.zip_code} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="text" className="custom-input-placeform" id="city" value={place.city} readOnly />
@@ -98,7 +98,7 @@ export default function Places() {
                   <input type="text" className="custom-input-placeform" id="category" value={place.category} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
-                  <input type="text" className="custom-input-placeform" id="description" value={place.description} readOnly />
+                  <textarea type="text" className="custom-input-placeform" id="description" value={place.description} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="text" className="custom-input-placeform" id="price" value={place.price} readOnly />
