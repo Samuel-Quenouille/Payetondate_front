@@ -241,11 +241,6 @@
         text-align: center !important;
       }
       
-      .kiss-title{
-        font-size: 1rem !important;
-        padding-top: 80px;
-        text-align: center !important;
-      }
 
       .category-icon{
         padding-top: 90px;
@@ -357,7 +352,7 @@
       .spot-description{
         font-weight: lighter !important;
       }
-    }
+    
 
     /************* LOGIN *****************/
     .top-title-login{
@@ -420,7 +415,7 @@
     }
 
     /************* ARTICLES *****************/
-    .title_post, h1{
+    .title_post{
       font-size: 1rem !important;
       width: 180px;
       margin-left: 70px !important;
@@ -454,8 +449,7 @@
     .btn-readpost{
       font-size: 0.6rem;
     }
-  
-
+  }
 /*********************** IPAD AIR ***************************/
 @media screen and (min-width: 820px) and (max-width: 1180px) {
 
@@ -986,23 +980,16 @@ a{
   align-items: center !important;
 }
 
-/************* CATEGORIES PAGES *****************/
-
-.free-title, .unusual-title, .big_game-title, .kiss-title {
-  text-align: center;
-  font-family: 'Abril Fatface', cursive;
-  color: white;
-  font-size: 2.5rem;
-}
-
-.text-free, .text-unusual, .text-big_game, .text-kiss {
-  color: white !important;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9em;
-}
-
 
 /************* SPOTS *****************/
+.title_categoriespage {
+  margin-top: 7%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px !important;
+  color: #ffffff;
+  text-align: center;
+}
+
 .image-and-content {
   display: flex;
   align-items: center;
