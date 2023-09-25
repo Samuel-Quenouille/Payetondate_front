@@ -47,8 +47,8 @@ export default function Unusual() {
 
     return (
         <div className="container">
-        <img src={yeux} alt="Eye Icon" className="eye-icon" style={{ width: '5%', position: 'absolute', marginLeft: '555px', marginTop: '-32px' }} />
-        <h1 className="kiss-title" style={{position: 'relative'}}>Insolite</h1>
+        <img src={yeux} alt="Eye Icon" className="eye-icon" style={{ width: '5%', position: 'absolute', marginLeft: '530px', marginTop: '-25px' }} />
+        <h1 className="title_categoriespage" style={{position: 'relative'}}>Insolite</h1>
         <div className="d-flex justify-content-start">
             <Link to="/">
                 <span className='return-link'>Retour</span>
@@ -57,31 +57,29 @@ export default function Unusual() {
         <div className="image-and-content">
                 <img src={fromage} alt='Fromage' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>Fromagerie COW</b>, 30 boulevard Saint Germain 75005 Paris</p>
+                    <p className='spot-title' style={{color:'white'}}><b>Fromagerie COW</b>, 30 boulevard Saint-Germain 75005 Paris</p>
                     <p className='spot-description'>Amateurs de fromage et de vin, embarquez pour un voyage insolite ! Accompagnés par des fromagers experts, plongez dans l'univers des fromages et explorez leurs nuances uniques. 
                     Laissez-vous emporter par cette expérience sensorielle qui éveillera vos sens et fera danser vos papilles.</p>
                     <p>Fourchette de prix: 70€</p>
                     <button type="submit" className="circle-btn btn-map-4">Voir sur la map</button>
                 </div>
             </div>
-            <div className="image-and-content">
-                <img src={arcade} alt='Arcade' style={{width:'20%'}} className='spot-img' />
-                <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>La tête dans les nuages</b>, 5 Bd des Italiens, 75002 Paris</p>
-                    <p className='spot-description'>La salle de jeux 'La Tête dans les Nuages' est un paradis ludique, un monde d'amusement débordant où les rires et la joie règnent en maîtres. 
+        <div className="image-and-content">
+            <img src={arcade} alt='Arcade' style={{width:'20%'}} className='spot-img' />
+            <div className="content">
+                <p className='spot-title' style={{color:'white'}}><b>La tête dans les nuages</b>, 5 Bd des Italiens, 75002 Paris</p>
+                <p className='spot-description'>La salle de jeux 'La Tête dans les Nuages' est un paradis ludique, un monde d'amusement débordant où les rires et la joie règnent en maîtres. 
                     Ses étages regorgent de jeux d'arcade, de défis interactifs et d'activités divertissantes. 
                     C'est l'endroit parfait pour créer des souvenirs mémorables.</p>
-                    <p>Fourchette de prix: 15-20€</p>
-                    <button type="submit" className="circle-btn btn-map-4">Voir sur la map</button>
-                </div>
+                <p>Fourchette de prix: 15-20€</p>
+                <button type="submit" className="circle-btn btn-map-4">Voir sur la map</button>
             </div>
-            {places.map((place) => (  
+        </div>
+        {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
                 <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <h3>{place.title}</h3>
-                    <br></br>
-                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
@@ -96,9 +94,7 @@ export default function Unusual() {
                     )}
                 </div>
             </div>
-            ))}
-
+        ))}
     </div>
-
     );
 }
