@@ -68,6 +68,9 @@ export default function Testimonies() {
           if (response.ok) {
             console.log("Le témoignage a été supprimé avec succès");
             // Vous pouvez mettre à jour l'état ou rediriger l'utilisateur après la suppression
+            setTestimonies((prevTestimonies) =>
+            prevTestimonies.filter((testimony) => testimony.id !== testimonyId)
+            );
           } else {
             console.error("Erreur lors de la suppression du témoignage");
           }
@@ -77,29 +80,31 @@ export default function Testimonies() {
     };
 
     return (
-      <div className="d-flex flex-wrap justify-content-center">
+      <>
+      <h3 className="subtitle-admin px-5">Validation de témoignages</h3>
+      <div className="d-flex  justify-content-center">
         {testimonies.map((testimony) => (
           !testimony.is_validate && (
           <div key={testimony.id} className="col">
               <form className="d-flex flex-column align-items-center">
               <div className="row g-3">
                 <div className="col">
-                  <input type="text" className="input-tellus-first_name" id="first_name" value={testimony.first_name} readOnly />
+                  <input type="text" className="input-admin-first_name" id="first_name" value={testimony.first_name} readOnly />
                 </div>
                 <div className="col">
-                  <input type="text" className="input-tellus-age" id="age" value={testimony.age} readOnly />
+                  <input type="text" className="input-admin-age" id="age" value={testimony.age} readOnly />
                 </div>
               </div>
               <br></br>
                 <div className="mb-3">
-                  <textarea className="input-tellus-description" id="description" rows="6" value={testimony.description} readOnly />
+                  <textarea className="input-admin-description" id="description" rows="6" value={testimony.description} readOnly />
                 </div>
                 <div className="mb-3 text-center">
-                  <button type="submit" className="btn btn-primary" onClick={() => handleValidateTestimony(testimony.id)}>
+                  <button type="button" className="btn btn-validate-testimony" onClick={() => handleValidateTestimony(testimony.id)}>
                     Valider
                   </button>
                   {' '}
-                  <button type="submit" className="btn btn-danger" onClick={() => handleDeleteTestimony(testimony.id)}>
+                  <button type="button" className="btn btn-delete-testimony" onClick={() => handleDeleteTestimony(testimony.id)}>
                     Supprimer
                   </button>
                 </div>
@@ -108,5 +113,6 @@ export default function Testimonies() {
           )
         ))}
       </div>
+      </>
     )
 }

@@ -1195,3 +1195,94 @@ a{
   border: none;
   cursor: pointer;
 }
+
+/************* DASHBOARD ADMIN *****************/
+
+.btn-validate-testimony {
+  margin-right: 50px;
+  color: white !important; 
+  background-color: transparent !important; 
+  border: 1px solid white !important; 
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-validate-testimony:hover {
+  background-color: #14FF8E !important; 
+  color: #232323 !important;
+}
+
+.btn-delete-testimony {
+  color: white !important; 
+  background-color: transparent !important; 
+  border: 1px solid white !important; 
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-delete-testimony:hover {
+  background-color: #EA4231 !important; 
+  color: #232323 !important;
+}
+
+.btn-validate-place {
+  margin-top: 20px;
+  margin-right: 50px;
+  color: white !important; 
+  background-color: transparent !important; 
+  border: 1px solid white !important; 
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-validate-place:hover {
+  background-color: #14FF8E !important; 
+  color: #232323 !important;
+}
+
+.btn-delete-place {
+  margin-top: 20px;
+  color: white !important; 
+  background-color: transparent !important; 
+  border: 1px solid white !important; 
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-delete-place:hover {
+  background-color: #EA4231 !important; 
+  color: #232323 !important;
+}
+
+
+.input-admin-description {
+  width: 400px !important;
+  border-radius: 8px;
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+  padding: 10px;
+}
+
+.input-admin-age {
+  width: 90px !important;
+  padding: 5px; 
+  border-radius: 8px;
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.input-admin-first_name {
+  width: 294px !important; 
+  background-color: transparent !important;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.subtitle-admin {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}

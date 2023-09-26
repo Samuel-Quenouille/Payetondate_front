@@ -76,7 +76,7 @@ export default function Login() {
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="email"
+            placeholder="Email"
             required
             className="custom-input"
           />
@@ -89,7 +89,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
             className="custom-input"
-            placeholder="mot de passe"
+            placeholder="Mot de passe"
           />
         </div>
         <div className='link-register'>
