@@ -1161,6 +1161,45 @@ a{
   cursor: pointer;
 }
 
+
+/************* Footer *****************/
+
+.footer {
+  background-color: #A479FF;
+  align-content: center;
+  font-family: inherit;
+}
+
+.spacetext_footer_col1 {
+  margin-bottom: 20px;
+}
+
+.spacetext_footer_col2 {
+  margin-bottom: 12px;
+}
+
+.spacetext_footer_col3 {
+  margin-bottom: 25px;
+}
+
+
+.centered-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.subtitlelogo_footer {
+  color: #ffffff;
+  font-size: small;
+}
+
+.contact-info {
+  margin-bottom: 5px;
+}
+
+.text-white {
+  color: #ffffff;
+
 /************* DASHBOARD ADMIN *****************/
 
 .btn-validate-testimony {

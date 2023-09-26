@@ -18,6 +18,7 @@ import Kiss from './pages/kiss';
 import HistoryOf from './pages/HistoryOf';
 import ZodiacPosts from './pages/ZodiacPosts';
 import Articles from './pages/articles';
+import Footer from './components/Footer';
 
 export default function App() {
   const [user] = useAtom(userAtom);
@@ -54,6 +55,7 @@ export default function App() {
         <Route path="/zodiacposts" element={<ZodiacPosts />} />
         <Route path="/articles" element={<Articles />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </>
   )
