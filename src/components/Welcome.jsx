@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import logo from '../assets/img/logo.png';
 import '../index.css';
 
 export default function Welcome() {
@@ -12,7 +12,7 @@ export default function Welcome() {
 
   return (
     <div className='container welcome'>
-      <img className='logo' src='src/assets/img/logo.png' alt='Logo' style={{ display: 'block', margin: '0 auto', width: '30%' }}/>
+      <img className='logo' src={logo} alt='Logo' style={{ display: 'block', margin: '0 auto', width: '30%' }}/>
       <h2 className='welcome-title'>
         Repère le lieu idéal pour<br></br>LE Date !
       </h2>
