@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import zodiac from '../assets/img/zodiac.jpg';
 import '../index.css';
 import './ZodiacPosts'
 
@@ -12,7 +13,7 @@ export default function Articles() {
           <div className="row row-cols-1 row-cols-md-3 g-4 py-4">
               <div className="col">
                   <div className="card h-100">
-                      <img src="src/assets/img/zodiac.jpg" className="card-img-top custom-image" alt="café des deux moulins" />
+                      <img src={zodiac} className="card-img-top custom-image" alt="zodiac" />
                   <div className="card-body custom-body-1">
                       <h5 className="card-title">Où emmener son date selon son signe astro ?</h5>
                       <p className="card-text">Céline a accepté votre rendez-vous. La date et l’heure sont fixées, youpi ! Oui, mais pour aller où ?! Ah, qu’est-ce que vous feriez sans nous ? Comme on est sympas, on vous propose cette semaine, quelques idées de lieux selon le signe astro de votre date.</p>
