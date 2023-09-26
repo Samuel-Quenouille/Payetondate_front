@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
+import { API_BASE_URL } from "../../config";
 
 export default function CreatePlace() {
   const [title, setTitle] = useState('');
@@ -76,7 +77,7 @@ export default function CreatePlace() {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/places', {
+      const response = await fetch(`${API_BASE_URL}/places`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
