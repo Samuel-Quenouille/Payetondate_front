@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Sagittarius from '../assets/img/sagittarius.png'
 import Capricorn from '../assets/img/capricorn.png'
 import Aquarius from '../assets/img/aquarius.png'

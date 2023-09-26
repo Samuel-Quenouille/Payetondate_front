@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
-import Logo from '../assets/img/logo.png';
-import Articles from '../pages/articles';
-
-
+import logo from '../assets/img/logo.png';
 
 export default function Footer() {
+  
     return (
       <>
-      
         <div className="footer mt-5 pb-4">
         <div className="row align-items-start">
           <div className="col text-center">
@@ -95,9 +92,9 @@ export default function Footer() {
             <p className='contact-info text-white'>contact@payetondate.fr</p>
           </div>
         </div>
-        <img src={Logo} alt='Paye ton date' className="centered-logo pt-4" style={{width:'5%'}} />
-        <p className='text-center subtitlelogo_footer'>© The Real WHOOP - 2023</p>
+        <img src={logo} alt='Paye ton date' className="centered-logo pt-4" style={{width:'5%'}} />
+        <p className='text-center subtitlelogo_footer'>© Paye ton date - 2023</p>
         </div>
-        </>
+      </>
     )
 }

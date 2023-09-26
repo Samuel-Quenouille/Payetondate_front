@@ -7,7 +7,6 @@ export default function Logout() {
     const [, setUser] = useAtom(userAtom);
     const navigate = useNavigate();
 
-
     const handleLogout = () => {
         setUser({
             id: '',
