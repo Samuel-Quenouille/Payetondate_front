@@ -47,7 +47,7 @@ export default function BigGame() {
 
     return (
         <div className="container">
-          <img src={coeur} alt="Heart Icon" className="category-icon" style={{ width: '4%', position: 'absolute', marginLeft: '470px', marginTop: '-9px' }} />
+          <img src={coeur} alt="Heart Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '33%', marginTop: '-1%' }} />
             <h1 className="title_categoriespage" style={{position: 'relative'}}>On sort le grand jeu</h1>
           <div className="d-flex justify-content-start">
                 <Link to="/">
