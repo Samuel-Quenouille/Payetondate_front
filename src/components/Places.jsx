@@ -66,13 +66,16 @@ export default function Places() {
           })
   
           if (response.ok) {
-            console.log("Votre annonce a été supprimée avec succès");
+            console.log("Le lieu a été supprimée avec succès");
             // Vous pouvez mettre à jour l'état ou rediriger l'utilisateur après la suppression
+            setPlaces((prevPlaces) =>
+            prevPlaces.filter((place) => place.id !== placeId)
+            );
           } else {
-            console.error("Erreur lors de la suppression de l'annonce");
+            console.error("Erreur lors de la suppression du lieu");
           }
         } catch (error) {
-          console.error("Erreur lors de la suppression de l'annonce :", error);
+          console.error("Erreur lors de la suppression du lieu :", error);
         }
     };
 
@@ -110,6 +113,9 @@ export default function Places() {
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="text" className="custom-input-placeform" id="url" value={place.url} readOnly />
+                </div>
+                <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
+                  <input type="text" className="custom-input-placeform" id="url" value={place.user_id} readOnly />
                 </div>
                 <div className="mb-3 text-center">
                   <button type="button" className="btn btn-validate-place" onClick={() => handleValidatePlace(place.id)}>
