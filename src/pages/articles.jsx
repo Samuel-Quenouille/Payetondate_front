@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 import './ZodiacPosts'
 
-export default function Categories() {
+export default function Articles() {
   
     return (
       <div className='container card-top'>
