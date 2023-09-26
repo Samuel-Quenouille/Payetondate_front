@@ -2,6 +2,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom'
+import { API_BASE_URL } from "../../config";
 
 export default function Testimonies() {
     const [testimonies, setTestimonies] = useState([]);
@@ -9,7 +10,7 @@ export default function Testimonies() {
     useEffect(() => {
         const fetchDataTestimony = async () => {
           try {
-            const response = await fetch('http://localhost:3000/testimonies', {
+            const response = await fetch(`${API_BASE_URL}/testimonies`, {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',
@@ -33,7 +34,7 @@ export default function Testimonies() {
 
     const handleValidateTestimony = async (testimonyId) => {
         try {
-          const response = await fetch(`http://localhost:3000/testimonies/${testimonyId}`, {
+          const response = await fetch(`${API_BASE_URL}/testimonies/${testimonyId}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -58,7 +59,7 @@ export default function Testimonies() {
 
     const handleDeleteTestimony = async (testimonyId) => {
         try {
-          const response = await fetch(`http://localhost:3000/testimonies/${testimonyId}`, {
+          const response = await fetch(`${API_BASE_URL}/testimonies/${testimonyId}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',

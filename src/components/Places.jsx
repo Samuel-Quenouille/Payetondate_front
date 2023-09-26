@@ -2,6 +2,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom'
+import { API_BASE_URL } from "../../config";
 
 export default function Places() {
     const [places, setPlaces] = useState([]);
@@ -9,7 +10,7 @@ export default function Places() {
     useEffect(() => {
         const fetchDataPlace = async () => {
           try {
-            const response = await fetch('http://localhost:3000/places', {
+            const response = await fetch(`${API_BASE_URL}/places`, {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',
@@ -33,7 +34,7 @@ export default function Places() {
 
     const handleValidatePlace = async (placeId) => {
         try {
-          const response = await fetch(`http://localhost:3000/places/${placeId}`, {
+          const response = await fetch(`${API_BASE_URL}/places/${placeId}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -58,7 +59,7 @@ export default function Places() {
 
     const handleDeletePlace = async (placeId) => {
         try {
-          const response = await fetch(`http://localhost:3000/places/${placeId}`, {
+          const response = await fetch(`${API_BASE_URL}/places/${placeId}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',

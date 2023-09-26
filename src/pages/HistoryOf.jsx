@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { API_BASE_URL } from "../../config";
 import Map from '../components/Map/Map';
 import '../index.css';
 import tonnerre from '../assets/img/tonnerre.png';
@@ -21,7 +22,7 @@ export default function HistoryOf() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-          const response = await fetch('http://localhost:3000/places', {
+          const response = await fetch(`${API_BASE_URL}/places`, {
               method: 'GET',
               headers: {
                   'Content-Type': 'application/json',
