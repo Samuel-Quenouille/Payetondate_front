@@ -66,17 +66,22 @@ export default function Places() {
           })
   
           if (response.ok) {
-            console.log("Votre annonce a été supprimée avec succès");
+            console.log("Le lieu a été supprimée avec succès");
             // Vous pouvez mettre à jour l'état ou rediriger l'utilisateur après la suppression
+            setPlaces((prevPlaces) =>
+            prevPlaces.filter((place) => place.id !== placeId)
+            );
           } else {
-            console.error("Erreur lors de la suppression de l'annonce");
+            console.error("Erreur lors de la suppression du lieu");
           }
         } catch (error) {
-          console.error("Erreur lors de la suppression de l'annonce :", error);
+          console.error("Erreur lors de la suppression du lieu :", error);
         }
     };
 
     return (
+      <>
+      <h3 className="subtitle-admin px-5">Validation de lieux</h3>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {places.map((place) => (
           !place.is_validate && (
@@ -89,7 +94,7 @@ export default function Places() {
                   <input type="text" className="custom-input-placeform" id="address" value={place.address} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
-                  <textarea className="custom-input-placeform" id="zip_code" value={place.zip_code} readOnly />
+                  <input className="custom-input-placeform" id="zip_code" value={place.zip_code} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="text" className="custom-input-placeform" id="city" value={place.city} readOnly />
@@ -98,7 +103,7 @@ export default function Places() {
                   <input type="text" className="custom-input-placeform" id="category" value={place.category} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
-                  <input type="text" className="custom-input-placeform" id="description" value={place.description} readOnly />
+                  <textarea type="text" className="custom-input-placeform" id="description" value={place.description} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
                   <input type="text" className="custom-input-placeform" id="price" value={place.price} readOnly />
@@ -110,14 +115,14 @@ export default function Places() {
                   <input type="text" className="custom-input-placeform" id="url" value={place.url} readOnly />
                 </div>
                 <div className="mb-3" style={{display: 'flex', justifyContent: 'center'}}>
-                  <input type="email" className="custom-input-placeform" id="user_id" value={place.user_id} readOnly />
+                  <input type="text" className="custom-input-placeform" id="url" value={place.user_id} readOnly />
                 </div>
                 <div className="mb-3 text-center">
-                  <button type="submit" className="btn btn-primary" onClick={() => handleValidatePlace(place.id)}>
+                  <button type="button" className="btn btn-validate-place" onClick={() => handleValidatePlace(place.id)}>
                     Valider
                   </button>
                   {''}
-                  <button type="submit" className="btn btn-danger" onClick={() => handleDeletePlace(place.id)}>
+                  <button type="button" className="btn btn-delete-place" onClick={() => handleDeletePlace(place.id)}>
                     Supprimer
                   </button>
                 </div>
@@ -126,5 +131,6 @@ export default function Places() {
           )
         ))}
       </div>
+      </>
     )
 }

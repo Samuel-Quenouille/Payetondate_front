@@ -49,7 +49,7 @@ export default function HistoryOf() {
 
     return (
       <div className="container">
-        <img src={tonnerre} alt="Cloud Icon" className="category-icon" style={{ width: '7%', position: 'absolute', marginLeft: '510px', marginTop: '-15px' }} />
+        <img src={tonnerre} alt="Storm Icon" className="category-icon" style={{ width: '5%', position: 'absolute', marginLeft: '37%', marginTop: '-1%' }} />
         <h1 className="title_categoriespage" style={{position: 'relative'}}>Histoire de</h1>
         <h6 className="subtitle_categoriespage" style={{position: 'relative'}}>avant de conclure</h6>
         <div className="d-flex justify-content-start">
@@ -80,19 +80,17 @@ export default function HistoryOf() {
             <div className="image-and-content" key={place.id}>
               <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <h3>{place.title}</h3>
-                    <br></br>
-                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
-                    <button type="submit" onClick={openMap} className="circle-btn btn-map-2">Voir sur la map</button>
+                    <button type="submit" onClick={openMap} className="circle-btn btn-map">Voir sur la map</button>
                     {showMap && (
                       <div className="map-modal">
                           <button onClick={closeMap} className="close-button">
                             Fermer
                           </button>
-                          <Map city={place.address} />
+                          <Map address={place.address} zip_code={place.zip_code} city={place.city} />
                       </div>
                     )}
                 </div>

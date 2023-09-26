@@ -5,7 +5,6 @@ import {useParams} from 'react-router-dom'
 import Places from "../components/Places";
 import Testimonies from "../components/Testimonies";
 
-
 export default function Admin() {
 
   return (

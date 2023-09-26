@@ -48,8 +48,8 @@ export default function Kiss() {
 
     return (
         <div className="container">
-            <img src={cloudIcon} alt="Cloud Icon" className="cloud-icon" style={{ width: '5%', position: 'absolute', marginLeft: '500px', marginTop: '-19px' }} />
-            <h1 className="kiss-title" style={{position: 'relative'}}>Spots à bisou(s)</h1>
+            <img src={cloudIcon} alt="Cloud Icon" className="cloud-icon" style={{ width: '5%', position: 'absolute', marginLeft: '35%', marginTop: '-1%' }} />
+            <h1 className="title_categoriespage" style={{position: 'relative'}}>Spots à bisou(s)</h1>
             <div className="d-flex justify-content-start">
                 <Link to="/">
                     <span className='return-link'>Retour</span>
@@ -79,9 +79,7 @@ export default function Kiss() {
             <div className="image-and-content" key={place.id}>
                 <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
                 <div className="content">
-                    <h3>{place.title}</h3>
-                    <br></br>
-                    <p style={{color:'white'}}>{place.address}, {place.city} {place.borough}</p>
+                    <p style={{color:'white'}}><b>{place.title}</b>, {place.address}, {place.zip_code} {place.city}</p>
                     <p className='spot-description'>{place.description}</p>
                     <p>Fourchette de prix: {place.price}</p>
                     <br></br>
@@ -91,7 +89,7 @@ export default function Kiss() {
                             <button onClick={closeMap} className="close-button">
                                 Fermer
                             </button>
-                            <Map city={place.address} />
+                            <Map address={place.address} zip_code={place.zip_code} city={place.city} />
                         </div>
                     )}
                 </div>
