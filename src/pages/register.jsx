@@ -70,7 +70,7 @@ export default function Register() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="email"
+            placeholder="Email"
             required
             className="custom-input"
           />
@@ -83,7 +83,7 @@ export default function Register() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="mot de passe"
+            placeholder="Mot de passe"
             required
             className="custom-input"
           />
@@ -96,7 +96,7 @@ export default function Register() {
             id="password"
             value={password_confirmation}
             onChange={(e) => setPassword_Confirmation(e.target.value)}
-            placeholder="mot de passe"
+            placeholder="Confirme ton mot de passe"
             required
             className="custom-input"
           />
