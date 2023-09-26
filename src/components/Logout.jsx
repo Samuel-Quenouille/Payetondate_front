@@ -22,6 +22,6 @@ export default function Logout() {
     };
 
     return (
-        <button onClick={handleLogout}>Déconnexion</button>
+        <button className='disconnect-button' onClick={handleLogout}>Déconnexion</button>
     );
 }

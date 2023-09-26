@@ -47,7 +47,7 @@ export default function Unusual() {
 
     return (
         <div className="container">
-        <img src={yeux} alt="Eye Icon" className="eye-icon" style={{ width: '5%', position: 'absolute', marginLeft: '555px', marginTop: '-32px' }} />
+        <img src={yeux} alt="Eye Icon" className="eye-icon" style={{ width: '5%', position: 'absolute', marginLeft: '39%', marginTop: '-2%' }} />
         <h1 className="title_categoriespage" style={{position: 'relative'}}>Insolite</h1>
         <div className="d-flex justify-content-start">
             <Link to="/">

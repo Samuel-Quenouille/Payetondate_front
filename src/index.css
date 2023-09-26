@@ -450,81 +450,7 @@
       font-size: 0.6rem;
     }
   }
-/*********************** IPAD AIR ***************************/
-@media screen and (min-width: 820px) and (max-width: 1180px) {
 
-     /************* NAVBAR *****************/
-     .navbar {
-      background-color: #232323;
-      color: white !important;
-      font-family: 'Inter', sans-serif;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    a {
-      color: white !important;
-    }
-
-    .whitebtn {
-      width: 100px !important;
-      height: 20px !important;
-      border: 1px solid white;
-      background-color: transparent;
-      border-radius: 8px !important;
-      color: white;
-      font-size: 1rem !important;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      outline: none;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    /************* HOMEPAGE ****************/
-    .logo{
-      padding-top: 50px;
-      width: 20% !important;
-    }
-    
-    .welcome-title{
-      padding-top: 40px;
-      font-size: 1.5rem !important;
-    }
-
-    .welcome-text{
-      margin-top: -20px;
-      font-size: 1rem !important;
-    }
-
-    .search-bar{
-      display: flex !important;
-      justify-content: center !important;
-      background-color: transparent;
-      border: 1px solid white;
-      border-radius: 50px !important;
-      width: 220px !important;
-      height: 30px !important;
-      color: white;
-      margin-top: 10px !important;
-      margin-left: 40px;
-      font-size: 0.8rem !important;
-    }
-    
-    .form-inline .search-bar {
-      margin-right: -5em;
-    }
-    
-    .search-button {
-      background-color: transparent;
-      cursor: pointer;
-      margin-top: -1px !important;
-      margin-left: -4px !important;
-      width: 100px;
-    }
-  }
 
 body{
   background-color: #232323 !important;
@@ -550,11 +476,15 @@ p{
 }
 
 /************* WELCOME *****************/ 
+.logo{
+  width: 20% !important;
+}
+
 .welcome-title, h2{
   text-align: center;
   font-family: 'Abril Fatface', cursive;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .welcome-text{
@@ -593,7 +523,7 @@ p{
   margin-bottom: 70px;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .label-input-container {
@@ -607,7 +537,7 @@ p{
   text-align: right; /* Aligner le texte du label à droite */
   margin-right: 60px; /* Espacement entre le label et l'input */
   font-family: 'Abril Fatface', cursive;
-  font-size: 2.3em;
+  font-size: 2rem;
 }
 
 .custom-input{
@@ -618,6 +548,7 @@ p{
   background-color: transparent;
   width: 100%;
   color: white;
+  font-size: 0.9rem;
 }
 
 .button-login {
@@ -630,12 +561,12 @@ p{
 .button-login button {
   color: white;
   border: 1px solid white;
-  width: 110px;
-  height: 110px;
+  width: 8em !important;
+  height: 8em !important;
   border-radius: 50%;
   transition: background-color 0.3s ease;
   text-align: center; /* Centre le texte horizontalement */
-  font-size: 0.7em;
+  font-size: 0.8em !important;
   display: flex;
   flex-direction: column; /* Pour centrer le texte verticalement */
   justify-content: center; /* Pour centrer le texte verticalement */
@@ -665,12 +596,12 @@ p{
 .button-register button {
   color: white;
   border: 1px solid white;
-  width: 100px;
-  height: 100px;
+  width: 8em !important;
+  height: 8em !important;
   border-radius: 50%;
   transition: background-color 0.3s ease;
   text-align: center; /* Centre le texte horizontalement */
-  font-size: 0.7em;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column; /* Pour centrer le texte verticalement */
   justify-content: center; 
@@ -702,8 +633,8 @@ p{
   top: 0;
   left: 0;
   z-index: 1; /* Pour placer l'icône au-dessus de l'image */
-  width: 50px !important; 
-  height: 50px !important; 
+  width: 20% !important; 
+  height: 20% !important; 
   }
   
 .custom-image {
@@ -834,7 +765,7 @@ p{
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2rem;
   line-height: 1.1;
 }
 
@@ -861,10 +792,11 @@ button:focus-visible {
   color: white !important;
   font-family: 'Abril Fatface', cursive !important;
   margin-top: 80px;
+  font-size: 2rem;
 }
 
 .card-firstname {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight:bold;
   text-align: right;
 }
@@ -872,19 +804,19 @@ button:focus-visible {
 .card-loveletter {
   text-align: justify;
   padding: 15px;
-  
+  font-size: 0.9rem;
 }
 
 /************* TELL US *****************/
 
 .circle-btn {
-  width: 100px;
-  height: 100px;
+  width: 8em !important;
+  height: 8em !important;
   border: 1px solid white;
   background-color: transparent;
   border-radius: 50%;
   color: white;
-  font-size: 16px;
+  font-size: 0.8rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -907,30 +839,36 @@ button:focus-visible {
 }
 
 .input-tellus-description {
-  width: 600px !important;
+  width: 300% !important;
+  margin-left: -110% !important;
   border-radius: 8px;
   background-color: transparent !important;
   border: 1px solid white !important;
   color: white !important;
   padding: 10px;
+  font-size: 0.9rem;
 }
 
 .input-tellus-first_name {
-  width: 383px !important; 
+  width: 170% !important; 
+  margin-left: -75% !important;
   background-color: transparent !important;
   border-radius: 8px;
   padding: 5px;
   border: 1px solid white !important;
   color: white !important;
+  font-size: 0.9rem;
 }
 
 .input-tellus-age {
-  width: 200px !important;
+  width: 150% !important;
+  margin-left: 2% !important;
   padding: 5px; 
   border-radius: 8px;
   background-color: transparent !important;
   border: 1px solid white !important;
   color: white !important;
+  font-size: 0.9rem;
 }
 
 /************* NAVBAR *****************/
@@ -940,6 +878,7 @@ button:focus-visible {
   color: white !important;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .navbar a.active {
@@ -950,15 +889,39 @@ a{
   color: white !important;
 }
 
+.disconnect-button{
+  width: 7em;
+  height: 7em;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
+  color: white !important;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  margin-top: -15%;
+}
+
+.disconnect-button:hover {
+  background-color: #ffffff;
+  color: #232323 !important;
+  text-decoration: none;
+  transition: background-color 0.3s ease !important;
+}
 
 .whitebtn {
-  width: 100px;
-  height: 100px;
+  width: 7em;
+  height: 7em;
   border: 1px solid white;
   background-color: transparent;
   border-radius: 50%;
   color: white;
-  font-size: 16px;
+  font-size: 0.8rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -979,6 +942,8 @@ a{
 .navbar-nav {
   display: flex !important;
   align-items: center !important;
+  margin-top: 2%;
+  margin-right: 0.5% !important;
 }
 
 
@@ -1011,7 +976,7 @@ a{
 }
 
 .spot-description{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .btn-map{
