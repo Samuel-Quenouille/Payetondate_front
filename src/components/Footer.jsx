@@ -23,13 +23,7 @@ export default function Footer() {
               <Link to="#">
                 <span>Notre top 5 de la semaine</span>
               </Link>
-            </div>
-
-            <div className='spacetext_footer_col1'>
-              <Link to="/createplace">
-                <span>Créer un lieu</span>
-              </Link>
-            </div>    
+            </div> 
 
             <div className='spacetext_footer_col1'>
               <Link to="#">
