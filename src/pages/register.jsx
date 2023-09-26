@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import { Link } from 'react-router-dom';
+import { API_BASE_URL } from "../../config";
 import Cookies from 'js-cookie';
 
 
@@ -19,7 +20,7 @@ export default function Register() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/users', {
+      const response = await fetch(`${API_BASE_URL}/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

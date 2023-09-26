@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import { API_BASE_URL } from "../../config";
 
-export default function CreatePlace() {
+export default function CreatePlaceForm() {
   const [title, setTitle] = useState('');
   const [address, setAddress] = useState('');
   const [zip_code, setZipCode] = useState('');
