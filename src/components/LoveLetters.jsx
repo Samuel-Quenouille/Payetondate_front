@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../index.css';
+import { API_BASE_URL } from "../../config";
 
 export default function LoveLetters() {
     const [testimonies, setTestimonies] = useState([]);
@@ -7,7 +8,7 @@ export default function LoveLetters() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/testimonies', {
+                const response = await fetch(`${API_BASE_URL}/testimonies`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
