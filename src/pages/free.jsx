@@ -53,6 +53,7 @@ export default function Free() {
                     <span className='return-link'>Retour</span>
                 </Link>
             </div>
+            
         {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
             <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
