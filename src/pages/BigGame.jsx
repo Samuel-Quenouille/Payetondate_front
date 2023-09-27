@@ -55,28 +55,6 @@ export default function BigGame() {
                     <span className='return-link'>Retour</span>
                 </Link>
             </div>
-            <div className="image-and-content">
-                <img src={restaurant_theleme} alt='La Scène Thélème' style={{width:'20%'}} className='spot-img' />
-                <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>La Scène Thélème</b>, 18 Rue Troyon, 75017 Paris</p>
-                    <p className='spot-description'> Ce restaurant marie l'art et la gastronomie, proposant parfois des représentations théâtrales avant le dîner. 
-                    Le chef japonais Yoshitaka Takayanagi offre une cuisine fine et subtile avec des produits de qualité. 
-                    Une expérience idéale pour sortir le grand jeu lors d'un rendez-vous amoureux à Paris.</p>
-                    <p>Fourchette de prix: 100€</p>
-                    <button type="submit" className="circle-btn btn-map-3">Voir sur la map</button>
-                </div>
-            </div>
-            <div className="image-and-content">
-                <img src={restaurant_terra} alt='Terra' style={{width:'20%'}} className='spot-img' />
-                <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>Terra</b>, 21 rue des Gravilliers, 75003 Paris</p>
-                    <p className='spot-description'> Ce restaurant marie l'art et la gastronomie, proposant parfois des représentations théâtrales avant le dîner. 
-                    Le chef japonais Yoshitaka Takayanagi offre une cuisine fine et subtile avec des produits de qualité. 
-                    Une expérience idéale pour sortir le grand jeu lors d'un rendez-vous amoureux à Paris.</p>
-                    <p>Fourchette de prix: 100€</p>
-                    <button type="submit" className="circle-btn btn-map-3">Voir sur la map</button>
-                </div>
-            </div>
 
             {places.map((place) => (  
             <div className="image-and-content" key={place.id}>

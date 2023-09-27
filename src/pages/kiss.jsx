@@ -56,26 +56,7 @@ export default function Kiss() {
                     <span className='return-link'>Retour</span>
                 </Link>
             </div>
-            <div className="image-and-content">
-                <img src={beaubourg} alt='Musée Beaubourg' style={{width:'20%'}} className='spot-img' />
-                <div className="content">
-                    <p className='spot-title' style={{color:'white'}}><b>Le centre Pompidou</b>, Place Georges-Pompidou, 75004 Paris</p>
-                    <p className='spot-description'>Découvrez ensemble l'art contemporain sous toutes ses facettes et laissez-vous emporter par la créativité et l'inspiration qui émanent de ce lieu emblématique de Paris.</p>
-                    <p>Fourchette de prix: 12-18€</p>
-                    <button type="submit" className="circle-btn btn-map-2">Voir sur la map</button>
-                </div>
-            </div>
-
-            <div className="image-and-content">
-                <img src={buttes_chaumont} alt='buttes chaumont' style={{width:'20%'}} className='spot-img' />
-                <div className="content">
-                    <p style={{color:'white'}}><b>Photo cabine</b>, Avenue Darcel, parc des Buttes Chaumonts, 75019 Paris</p>
-                    <p className='spot-description'>Situé dans le parc des Buttes Chaumont au pied du Pavillon Puebla, ce photomaton est idéal pour capturer un moment magique.</p>
-                    <p>Fourchette de prix: 3€</p>
-                    <button type="submit" className="circle-btn btn-map-2">Voir sur la map</button>
-                </div>
-            </div>
-
+            
             {places.map((place) => (  
             <div className="image-and-content" key={place.id}>
             <img src={place.image} alt='' style={{width:'20%'}} className='spot-img' />
