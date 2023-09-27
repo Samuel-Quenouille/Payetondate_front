@@ -4,7 +4,7 @@ import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import { isAdminAtom } from '../atom'
 import { Link } from 'react-router-dom';
-import { API_BASE_URL } from "../config";
+import { API_BASE_URL } from "../../config";
 import Cookies from 'js-cookie';
 
 
